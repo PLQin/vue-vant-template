@@ -1,0 +1,26 @@
+{
+  "code-runner.runInTerminal": true,
+  "vetur.format.defaultFormatterOptions": {
+    "prettier": {
+      "semi": false, //  不要分号分号
+      "singleQuote": true, //  要单引号
+    },
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.detectIndentation": false,
+  "vetur.validation.template": false,
+  "editor.tabSize": 2,
+  "search.exclude": {
+    "**/dist": true
+  },
+  "files.watcherExclude": {
+    "**/dist/**": true
+  },
+  "eslint.alwaysShowStatus": true,
+  "html.format.indentInnerHtml": true,
+  "html.format.indentHandlebars": true,
+  "terminal.integrated.confirmOnExit": true,
+  "terminal.integrated.cursorBlinking": true,
+}

@@ -1,0 +1,78 @@
+{
+  "name": "huopay-shopping-mall",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">= 12.18"
+  },
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "stylelint": "stylelint src/**/*.{html,vue,css,sass,scss} --fix",
+    "eslint": "vue-cli-service lint",
+    "lint": "yarn eslint && yarn stylelint"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "core-js": "^3.6.5",
+    "dayjs": "^1.8.32",
+    "js-cookie": "^2.2.1",
+    "vant": "^2.9.0",
+    "vconsole": "^3.3.4",
+    "vue": "^2.6.11",
+    "vue-clipboard2": "^0.3.1",
+    "vue-router": "^3.2.0",
+    "vuex": "^3.4.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-optional-chaining": "^7.10.1",
+    "@commitlint/cli": "^9.1.2",
+    "@commitlint/config-conventional": "^9.0.1",
+    "@vue/cli-plugin-babel": "^4.4.0",
+    "@vue/cli-plugin-eslint": "^4.4.0",
+    "@vue/cli-plugin-router": "^4.4.0",
+    "@vue/cli-plugin-vuex": "^4.4.0",
+    "@vue/cli-service": "^4.4.0",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-import": "^1.13.0",
+    "babel-plugin-jsx-v-model": "^2.0.3",
+    "babel-plugin-lodash": "^3.3.4",
+    "babel-plugin-syntax-jsx": "^6.18.0",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "babel-plugin-transform-vue-jsx": "^3.7.0",
+    "compression-webpack-plugin": "^4.0.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-vue": "^6.2.2",
+    "husky": "^4.2.5",
+    "less": "^3.11.3",
+    "less-loader": "^6.1.1",
+    "lint-staged": "^10.2.11",
+    "postcss-px-to-viewport": "^1.1.1",
+    "postcss-pxtorem": "^5.1.1",
+    "prettier": "^1.19.1",
+    "stylelint": "^13.6.0",
+    "stylelint-config-recess-order": "^2.0.4",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-prettier": "^1.1.2",
+    "stylelint-scss": "^3.17.2",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.{js,vue}": [
+      "vue-cli-service lint",
+      "git add -A"
+    ],
+    "*.{html,vue,css,sass,scss}": [
+      "yarn stylelint"
+    ]
+  }
+}
