@@ -1,7 +1,9 @@
 
 const webpackConfig = require('./config/webpack.config.js')
-const CompressionWebpackPlugin = require('compression-webpack-plugin')
 const isProd = process.env.NODE_ENV === 'production'
+
+// gzip
+const CompressionWebpackPlugin = require('compression-webpack-plugin')
 
 module.exports = {
   configureWebpack: config => {
@@ -24,14 +26,11 @@ module.exports = {
     })
     webpackConfig(config)
   },
-  // 不需要生产环境的 source map
-  productionSourceMap: false,
+  productionSourceMap: false, // 生产环境不需要 source map
   publicPath: !isProd ? '/' : '',
   css: {
-    // 是否将css 提取到独立的文件,生产环境提取，开发环境不提取
-    extract: !!isProd,
-    // 开发模式开启css sourcemap
-    sourceMap: !isProd,
+    extract: !!isProd, // 是否将css 提取到独立的文件,生产环境提取，开发环境不提取
+    sourceMap: !isProd, // 开发模式开启css sourcemap
     loaderOptions: {
       less: {
         lessOptions: {

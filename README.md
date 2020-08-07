@@ -94,12 +94,3 @@ npm run lint
   ```shell
   "vetur.validation.script": false,
   ```
-
-
-
-
-
-
-
-
-
