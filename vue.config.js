@@ -51,6 +51,13 @@ module.exports = {
         pathRewrite: {
           '^/': ''
         }
+      },
+      '^/mock': {
+        target: 'http://161.189.158.180:8080',
+        changeOrigin: false,
+        pathRewrite: {
+          '^/mock': '/mock'
+        }
       }
     }
   }
