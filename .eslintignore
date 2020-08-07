@@ -1,6 +1,10 @@
-.DS_Store
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Node and JavaScript
 node_modules
-/dist
+dist
 
 # local env files
 .env.local
@@ -19,3 +23,10 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw?
+
+# OSX
+# =========================
+
+.DS_Store
+.AppleDouble
+.LSOverride

@@ -4,6 +4,11 @@ ehthumbs.db
 
 # Node and JavaScript
 node_modules
+dist
+
+# local env files
+.env.local
+.env.*.local
 
 # Folder config file
 Desktop.ini

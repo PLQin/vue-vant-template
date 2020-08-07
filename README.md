@@ -57,11 +57,17 @@ Vant的模板。拥有基本的页面，例子和完整的配置，fork后就可
 # 安装
 npm run install
 
+# 后端人员配置开发(开发人员之间配置互不冲突)
+npm run local
+
 # 启动
 npm run serve
 
 # 打包
 npm run build
+
+# 打包(将log日志输出在当前目录)
+npm run build:log
 
 # 代码校验
 npm run lint

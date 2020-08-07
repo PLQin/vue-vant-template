@@ -7,7 +7,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "build:log": "vue-cli-service build --profile --json > build.log",
-    "eslint": "vue-cli-service lint",
+    "local": "vue-cli-service serve --mode local",
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
