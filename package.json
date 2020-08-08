@@ -3,11 +3,16 @@
   "version": "0.1.0",
   "description": "Vue Vant Template, all you need to do is `git clone`",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PLQin/vue-vant-template.git"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "build:log": "vue-cli-service build --profile --json > build.log",
     "local": "vue-cli-service serve --mode local",
+    "mock": "vue-cli-service serve --mode mock",
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
