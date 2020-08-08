@@ -1,5 +1,6 @@
 {
   "code-runner.runInTerminal": true,
+  "git.ignoreLimitWarning": true,
   "vetur.format.defaultFormatterOptions": {
     "prettier": {
       "semi": false, //  不要分号分号
