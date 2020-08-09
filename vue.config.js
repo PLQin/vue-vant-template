@@ -42,7 +42,6 @@ module.exports = {
     }
   },
   devServer: {
-    port: 8080,
     proxy: {
       '^/': {
         target: 'http://161.189.158.180:8080',
@@ -52,7 +51,7 @@ module.exports = {
         }
       },
       '^/mock': {
-        target: 'http://161.189.158.180:8080',
+        target: 'http://127.0.0.1:8080',
         changeOrigin: false,
         pathRewrite: {
           '^/mock': '/mock'

@@ -9,10 +9,11 @@
   },
   "scripts": {
     "serve": "vue-cli-service serve",
+    "serve:mock": "vue-cli-service serve --mode mock",
+    "serve:local": "vue-cli-service serve --mode local",
     "build": "vue-cli-service build",
     "build:log": "vue-cli-service build --profile --json > build.log",
-    "local": "vue-cli-service serve --mode local",
-    "mock": "vue-cli-service serve --mode mock",
+    "mock": "json-server --routes src/mock/routes.json --watch src/mock/index.js --port 9000",
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
@@ -48,9 +49,11 @@
     "eslint-plugin-babel": "^5.3.0",
     "eslint-plugin-vue": "^6.2.2",
     "husky": "^4.2.5",
+    "json-server": "^0.16.1",
     "less": "^3.11.3",
     "less-loader": "^6.1.1",
     "lint-staged": "^10.2.11",
+    "mockjs": "^1.1.0",
     "postcss-px-to-viewport": "^1.1.1",
     "postcss-pxtorem": "^5.1.1",
     "vue-template-compiler": "^2.6.11"
