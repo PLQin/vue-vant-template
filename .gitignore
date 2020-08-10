@@ -6,6 +6,11 @@ ehthumbs.db
 node_modules
 dist
 
+# yarn and npm files
+yarn-*.log
+npm-*.log
+*.log
+
 # local env files
 .env.local
 .env.*.local
