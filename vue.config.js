@@ -5,6 +5,11 @@ const isProd = process.env.NODE_ENV === 'production'
 // gzip
 const CompressionWebpackPlugin = require('compression-webpack-plugin')
 
+// Configure the proxy address, which can also be set .env
+// When used with mock services, devServerProxyTarget is required. Otherwise, TypeError: Cannot read property 'upgrade' of undefined
+// https://segmentfault.com/q/1010000020916388
+const devServerProxyTarget = 'http://161.189.158.180:8080'
+
 module.exports = {
   configureWebpack: config => {
     if (isProd) {
@@ -43,18 +48,18 @@ module.exports = {
   },
   devServer: {
     proxy: {
-      '^/': {
-        target: 'http://161.189.158.180:8080',
-        changeOrigin: false,
-        pathRewrite: {
-          '^/': ''
-        }
-      },
       '^/mock': {
-        target: 'http://127.0.0.1:8080',
+        target: process.env.VUE_APP_MOCK_BASE_URL || devServerProxyTarget,
         changeOrigin: false,
         pathRewrite: {
           '^/mock': '/mock'
+        }
+      },
+      '^/': {
+        target: devServerProxyTarget,
+        changeOrigin: false,
+        pathRewrite: {
+          '^/': ''
         }
       }
     }

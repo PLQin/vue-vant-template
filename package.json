@@ -13,7 +13,7 @@
     "serve:local": "vue-cli-service serve --mode local",
     "build": "vue-cli-service build",
     "build:log": "vue-cli-service build --profile --json > build.log",
-    "mock": "json-server --routes src/mock/routes.json --watch src/mock/index.js --port 9000",
+    "mock": "json-server --routes src/mock/routes.json --watch src/mock/index.js -m src/mock/method.js --port 9000",
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
