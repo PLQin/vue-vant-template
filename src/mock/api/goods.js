@@ -27,7 +27,7 @@ module.exports = {
       'updateTime': 1596798728000,
       'deleted': 0,
       'detail': null,
-      'currency': 'HT',
+      'currency': 'RMB',
       'gid': '12312312312312',
       'id': '12312312312312'
     },
@@ -51,7 +51,7 @@ module.exports = {
       'updateTime': 1596821756000,
       'deleted': 0,
       'detail': null,
-      'currency': 'USDT',
+      'currency': 'RMB',
       'gid': '213123123123123',
       'id': '213123123123123'
     },
@@ -79,7 +79,7 @@ module.exports = {
       'updateTime': 1597023723000,
       'deleted': 0,
       'detail': null,
-      'currency': 'HT',
+      'currency': 'RMB',
       'gid': '323567466877867',
       'id': '323567466877867'
     }

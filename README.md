@@ -10,7 +10,7 @@ Vant的模板。拥有基本的页面，例子和完整的配置，fork后就可
 ## 😜 功能与配置
 
 - `mock`  
-  运行命令`npm run mock`，启动带测试数据的开发环境。或结合[vue-mock-cli](https://github.com/PLQin/vue-mock-cli)食用。
+  运行命令`npm run mock`，后再运行命令`npm run serve:local`。或结合[vue-mock-cli](https://github.com/PLQin/vue-mock-cli)食用。
 
 - 屏蔽微信浏览器  
   如果您的用户在微信浏览器中打开由本模版创建的项目，则会弹出一个弹窗来提示：请使用系统浏览器打开本网页。  
