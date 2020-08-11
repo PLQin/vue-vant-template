@@ -1,0 +1,33 @@
+#app {
+  font-family: PingFangSC-Regular;
+  background-color: #f1f3f5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  min-height: 100vh;
+
+  // https://www.zhangxinxu.com/wordpress/2018/10/scroll-behavior-scrollintoview-平滑滚动/
+  scroll-behavior: smooth;
+}
+
+/** 解决路由切换动画上下闪动问题 */
+.router {
+  width: 100%;
+  backface-visibility: hidden;
+  min-height: 100vh;
+}
+
+.van-slide-right-enter-active,
+.van-slide-right-leave-active {
+  transition: opacity 0.2s;
+}
+.van-slide-right-enter,
+.van-slide-right-leave-to {
+  opacity: 0;
+}
+
+/** 返回按钮 */
+.van-nav-bar .van-icon,
+.van-nav-bar__title {
+  color: #000000;
+}
