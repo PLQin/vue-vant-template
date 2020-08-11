@@ -5,8 +5,8 @@
       <van-nav-bar
         class="nav-bar"
         :title="$route.meta.title"
-        left-text
-        right-text
+        fixed
+        placeholder
         left-arrow
         @click-left="openPrevious"
       />
@@ -15,7 +15,7 @@
     <div class="elem-111 elem-115">
       <div class="elem-112">
         <div v-if="!address">
-          <van-cell class="elem-116" title="请添加收货地址" is-link @click="editAddress" />
+          <van-cell class="elem-116" title="Please add shipping address" is-link @click="editAddress" />
         </div>
         <div v-else>
           <div class="van-address-item">
@@ -156,17 +156,7 @@
 import { dataDesensitization } from '@/utils/index.js'
 import { detail } from '@/api/goods.js'
 import { createOrder } from '@/api/order.js'
-import { NavBar, Cell, CellGroup, Card, Toast, AddressList, Stepper } from 'vant'
 export default {
-  components: {
-    [NavBar.name]: NavBar,
-    [Cell.name]: Cell,
-    [CellGroup.name]: CellGroup,
-    [Card.name]: Card,
-    [Toast.name]: Toast,
-    [AddressList.name]: AddressList,
-    [Stepper.name]: Stepper
-  },
   data() {
     return {
       detail: {},
@@ -205,8 +195,8 @@ export default {
     async onSubmitOrder() {
       const address = this.address
       if (!address) {
-        Toast('no address')
-        loading.close()
+        this.$toast('no address')
+        return
       }
       const { gid } = this.$route.query
       const loading = this.$loading()
@@ -218,10 +208,11 @@ export default {
         goodsPrice: this.totalPrices,
         currency: this.detail.currency,
         message: '',
-        number: this.stepperValue
+        number: this.stepperValue,
+        userId: this.$clientId
       }
       const resp = await createOrder(sendForm).catch(() => {})
-      if (resp && !resp.data) Toast(resp.msg)
+      if (resp && !resp.data) this.$toast(resp.msg)
       loading.close()
       this.$router.replace({ path: '/order/detail', query: { orderSn: resp.data }})
     },
@@ -231,11 +222,11 @@ export default {
     },
 
     onAdd() {
-      Toast('新增地址')
+      this.$toast('新增地址')
     },
 
     onEdit(item, index) {
-      Toast('编辑地址:' + index)
+      this.$toast('编辑地址:' + index)
     },
 
     editAddress() {

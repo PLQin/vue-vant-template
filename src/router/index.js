@@ -39,7 +39,7 @@ const routes = [
     name: 'Address',
     component: () => import('@/views/address/index.vue'),
     meta: {
-      title: '确认地址'
+      title: 'Shipping address'
     }
   },
   {

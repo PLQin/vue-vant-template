@@ -1,6 +1,9 @@
 
 <template>
   <div id="app" class="iframe-content">
+    <div class="my-order" @click="goMyOrder">
+      <span>My Orders</span>
+    </div>
     <div class="elem-0">
       <div
         scrolleventthrottle="100"
@@ -104,7 +107,7 @@
                 </div>
               </div>
             </div>
-             -->
+            -->
           </div>
         </div>
       </div>
@@ -118,14 +121,13 @@
 import { list } from '@/api/goods.js'
 import { isWeixin } from '@/utils/index.js'
 export default {
-  name: 'Home',
-  components: {},
   data() {
     return {
       showWxShare: false,
       list: []
     }
   },
+  computed: {},
   created() {
     if (isWeixin()) this.showWxShare = true
     this.init()
@@ -141,6 +143,10 @@ export default {
 
     async openDeatil(row) {
       this.$router.push({ name: 'GoodsDetail', query: { gid: row.gid }})
+    },
+
+    goMyOrder() {
+      this.$router.push({ name: 'OrderList' })
     }
   }
 }

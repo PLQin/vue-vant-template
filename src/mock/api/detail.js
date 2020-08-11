@@ -26,7 +26,7 @@ module.exports = {
     'updateTime': 1596798728000,
     'deleted': 0,
     'detail': null,
-    'currency': 'HT',
+    'currency': 'RMB',
     'gid': '12312312312312'
   }
 }

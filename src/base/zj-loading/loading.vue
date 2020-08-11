@@ -5,12 +5,7 @@
 </template>
 
 <script>
-import { Overlay, Loading } from 'vant'
 export default {
-  components: {
-    [Overlay.name]: Overlay,
-    [Loading.name]: Loading
-  },
   data() {
     return {
       loading: false

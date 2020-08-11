@@ -29,3 +29,15 @@ export function detail(orderSn) {
     method: 'get'
   })
 }
+
+/**
+ * 订单列表
+ * @param {*} data 订单过滤
+ */
+export function list(data) {
+  return request({
+    url: '/order/list',
+    method: 'post',
+    data
+  })
+}

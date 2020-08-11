@@ -4,6 +4,8 @@
       <van-nav-bar
         class="nav-bar"
         :title="$route.meta.title"
+        fixed
+        placeholder
         left-arrow
         @click-left="openPrevious"
       />
@@ -17,7 +19,7 @@
             <div v-if="detail.orderStatus === 101" class="van-cell__label">
               <van-count-down :time="(detail.createTime + 1000*30*60) - Date.now()">
                 <template v-slot="timeData">
-                  <span class="temaining">支付剩余时间</span>
+                  <span class="temaining">Count down</span>
                   <span class="block">{{ 0 }}</span>
                   <span class="colon">:</span>
                   <span class="block">{{ timeData.minutes }}</span>
@@ -145,10 +147,16 @@
       <van-button v-else round type="danger" @click="openPrevious">Repurchase</van-button>
     </div>
 
-    <van-dialog v-model="payDialogVisible" style="padding: 10px" :show-confirm-button="false">
-      <van-button type="primary" block round :href="qrcode">Huopay支付</van-button>
-      <van-button type="default" block round @click="toDownloadApp">没有安装Huopay?</van-button>
-      <van-button type="default" block round @click="payDialogVisible = false">取消</van-button>
+    <van-dialog v-model="payDialogVisible" style="padding: 10px;" :show-confirm-button="false">
+      <a
+        :href="qrcode"
+        class="van-button van-button--primary van-button--normal van-button--block van-button--round"
+      >
+        <div class="van-button__content"><span data-v-5f6b1fcf="" class="van-button__text">Pay with Huopay</span>
+        </div>
+      </a>
+      <van-button type="default" block round @click="toDownloadApp">Install Huopay?</van-button>
+      <van-button type="default" block round @click="payDialogVisible = false">Cancel</van-button>
     </van-dialog>
   </div>
 </template>
@@ -158,17 +166,16 @@ import { dataDesensitization } from '@/utils/index.js'
 import { detail } from '@/api/order.js'
 import { submit } from '@/api/pay.js'
 export default {
-  components: {},
   data() {
     return {
       detail: {},
       payDialogVisible: false,
       qrcode: '',
       statusMap: {
-        101: '待付款',
+        101: 'Waiting for payment',
         102: '用户取消',
-        103: '订单超时',
-        201: '等待发货',
+        103: 'Timeout',
+        201: 'Payment successful',
         202: '已申请退款',
         203: '退款成功',
         301: '已发货',
@@ -207,7 +214,7 @@ export default {
       const resp = await submit({ orderSn }).catch(() => {})
       loading.close()
       if (resp && resp.data) {
-        this.qrcode = `huopay://order_no=${resp.data.payId}&merchant_order_no=${this.detail.orderSn}&status=0&qr_code=${resp.data.qrcode}&scheme=${encodeURIComponent(window.location.href)}`
+        this.qrcode = `huopay://pay?order_no=${resp.data.payId}&merchant_order_no=${this.detail.orderSn}&status=0&qr_code=${resp.data.qrcode}&scheme=${encodeURIComponent(window.location.href)}`
         console.log('跳转链接：', this.qrcode)
         this.payDialogVisible = true
       } else {
@@ -216,7 +223,7 @@ export default {
     },
 
     onCopy() {
-      this.$toast('Coped')
+      this.$toast('Success')
     }
   }
 }

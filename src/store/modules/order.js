@@ -1,12 +1,11 @@
-// import Cookies from 'js-cookie'
-
 const state = {
-  // id: Cookies.get('orderId')
+  // orderId: localStorage.getItem('orderId')
 }
 
 const mutations = {
   // CREATE_ORDER: (state, orderId) => {
-  //   Cookies.set('orderId', orderId)
+  //  state.orderId = orderId
+  //  localStorage.setItem('orderId', orderId)
   // }
 }
 

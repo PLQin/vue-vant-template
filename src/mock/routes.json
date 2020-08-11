@@ -1,8 +1,11 @@
 {
   "/api/": "/",
-  "/mock/goods": "/goods",
-  "/mock/goods/detail/:id": "/detail",
   "/mock/order/create": "/create",
+  "/mock/goods/detail/:id": "/detail",
+  "/mock/goods": "/goods",
+  "/mock/order/list": "/list",
+  "/mock/order/detail/:id": "/order",
+  "/mock/pay/qrcode": "/qrcode",
   "/user/:id": "/user/:id",
   "/blog/:resource/:id/show": "/:resource/:id",
   "/blog/:category": "/posts?category=:category"

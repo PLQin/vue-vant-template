@@ -5,8 +5,6 @@
       <van-nav-bar
         class="nav-bar"
         :title="$route.meta.title"
-        left-text
-        right-text
         left-arrow
         @click-left="openPrevious"
       />
@@ -25,15 +23,8 @@
 </template>
 
 <script>
-import { NavBar, Cell, Toast, AddressEdit } from 'vant'
 import areaList from './area.js'
 export default {
-  components: {
-    [NavBar.name]: NavBar,
-    [Cell.name]: Cell,
-    [Toast.name]: Toast,
-    [AddressEdit.name]: AddressEdit
-  },
   data() {
     return {
       list: [],
@@ -53,7 +44,7 @@ export default {
     async onSave(data) {
       this.openPrevious()
       this.$store.dispatch('address/set', data)
-      Toast('保存成功')
+      this.$toast('Success')
     }
   }
 }
