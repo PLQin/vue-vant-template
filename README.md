@@ -32,7 +32,7 @@ Vant的模板。拥有基本的页面，例子和完整的配置，fork后就可
   本模版对`axios`进行了二次封装，使用时只需要调整一下`token`获取方式，封装文件位置在 `src/utils/request.js`。
 
 - 日期工具类  
-  本模版食用 [dayjs](https://github.com/xx45/dayjs)，它在GitHub上有28.2K的赞是一个使用范围极广的时间日期库，更重要的是：
+  本模版食用 [dayjs](https://github.com/xx45/dayjs)，它在GitHub上有28.2K的赞，是一个使用范围极广的时间日期库，更重要的是：
   - 支持UTC
   - 支持国际化  
   - 相比moment.js加上locals后3，400KB的体积，dayjs只有2KB  
