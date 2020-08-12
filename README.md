@@ -3,14 +3,14 @@ Vant的模板。拥有基本的页面，例子和完整的配置，fork后就可
 本仓库地址： https://github.com/PLQin/vue-vant-template。
 你的star是我更新的动力。
 
-## 💋 站在巨人的肩膀上
+## 💋 鸣谢
 
 感谢 [snowzijun/vue-vant-base](https://github.com/snowzijun/vue-vant-base)，他启发了我并提供了优秀的项目[vue-vant-base](https://github.com/snowzijun/vue-vant-base) 
 
 ## 😜 功能与配置
 
 - `mock`  
-  运行命令`npm run mock`，后再运行命令`npm run serve:local`。或结合[vue-mock-cli](https://github.com/PLQin/vue-mock-cli)食用。
+  运行命令`npm run mock`后，再运行命令`npm run serve:local`。或结合[vue-mock-cli](https://github.com/PLQin/vue-mock-cli)食用。
 
 - 屏蔽微信浏览器  
   如果您的用户在微信浏览器中打开由本模版创建的项目，则会弹出一个弹窗来提示：请使用系统浏览器打开本网页。  
