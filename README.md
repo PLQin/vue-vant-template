@@ -1,11 +1,28 @@
+<h1 align="center">Welcome to vue-vant-template 👋</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
+  <img src="https://img.shields.io/badge/node-%3E%3D%2012.18.0-blue.svg" />
+  <img src="https://img.shields.io/badge/npm-%3E%3D%206.14.0-blue.svg" />
+  <a href="https://github.com/PLQin/vue-vant-template#readme" target="_blank">
+    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
+  </a>
+  <a href="https://github.com/PLQin/vue-vant-template/graphs/commit-activity" target="_blank">
+    <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
+  </a>
+  <a href="https://github.com/PLQin/vue-vant-template/blob/master/LICENSE" target="_blank">
+    <img alt="License: MIT" src="https://img.shields.io/github/license/1/vue-vant-template" />
+  </a>
+</p>
 
-Vant的模板。拥有基本的页面，例子和完整的配置，fork后就可以立即使用。如果它帮助到你，请给我一颗星星。  
-本仓库地址： https://github.com/PLQin/vue-vant-template。
-你的star是我更新的动力。
+> Vant的模板。拥有基本的页面，例子和完整的配置，fork后就可以立即使用。如果它帮助到你，请给我一颗星星。  
+> 本仓库地址： https://github.com/PLQin/vue-vant-template。
+> 你的star是我更新的动力。
+
 
 ## 💋 鸣谢
 
 感谢 [snowzijun/vue-vant-base](https://github.com/snowzijun/vue-vant-base)，他启发了我并提供了优秀的项目[vue-vant-base](https://github.com/snowzijun/vue-vant-base) 
+
 
 ## 😜 功能与配置
 
@@ -55,28 +72,28 @@ Vant的模板。拥有基本的页面，例子和完整的配置，fork后就可
 
 ## 😁 所有命令
 
-```shell
-# 安装
-npm run install
+  ```shell
+  # 安装
+  npm run install
 
-# 启动开发环境
-npm run serve
+  # 启动开发环境
+  npm run serve
 
-# 后端人员配置开发环境(这样的话，各开发人员之间配置互不冲突)
-npm run serve:local
+  # 后端人员配置开发环境(这样的话，各开发人员之间配置互不冲突)
+  npm run serve:local
 
-# 启动开发环境(测试数据)
-npm run serve:mock
+  # 启动开发环境(测试数据)
+  npm run serve:mock
 
-# 打包
-npm run build
+  # 打包
+  npm run build
 
-# 打包(将log日志输出在当前目录)
-npm run build:log
+  # 打包(将log日志输出在当前目录)
+  npm run build:log
 
-# 代码校验
-npm run lint
-```
+  # 代码校验
+  npm run lint
+  ```
 
 ## 😥 常见问题
 
@@ -97,3 +114,27 @@ npm run lint
   ```shell
   "vetur.validation.script": false
   ```
+
+## 🔑 Prerequisites
+
+- node >= 12.18.0
+- npm >= 6.14.0
+
+
+## 👤 Author
+
+* Website: [@PLQin](https://segmentfault.com/u/_raymond)
+* Github: [@PLQin](https://github.com/PLQin)
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/PLQin/vue-vant-template/issues). 
+
+## 📝 License
+
+Copyright © 2020 [PLQin](https://github.com/PLQin).<br />
+This project is [MIT](https://github.com/PLQin/vue-vant-template/blob/master/LICENSE) licensed.
+
+---
+
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
