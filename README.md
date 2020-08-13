@@ -1,5 +1,5 @@
 <h1 align="center">Welcome to vue-vant-template 👋</h1>
-<p>
+<p align="center">
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
   <img src="https://img.shields.io/badge/node-%3E%3D%2012.18.0-blue.svg" />
   <img src="https://img.shields.io/badge/npm-%3E%3D%206.14.0-blue.svg" />
@@ -79,10 +79,10 @@
   # 启动开发环境
   npm run serve
 
-  # 后端人员配置开发环境(这样的话，各开发人员之间配置互不冲突)
+  # 其他人员配置开发环境(这样的话，各开发人员之间配置互不冲突)
   npm run serve:local
 
-  # 启动开发环境(测试数据)
+  # 启动开发环境(接口地址将指向测试数据的接口)
   npm run serve:mock
 
   # 打包
@@ -115,20 +115,20 @@
   "vetur.validation.script": false
   ```
 
-## 🔑 Prerequisites
+## 🔑 环境配置
 
 - node >= 12.18.0
 - npm >= 6.14.0
 
 
-## 👤 Author
+## 👤 贡献者
 
 * Website: [@PLQin](https://segmentfault.com/u/_raymond)
 * Github: [@PLQin](https://github.com/PLQin)
 
-## 🤝 Contributing
+## 🤝 参与贡献
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/PLQin/vue-vant-template/issues). 
+问题或功能请求都是受欢迎的! 请查看[issue页面](https://github.com/PLQin/vue-vant-template/issues). 
 
 ## 📝 License
 
