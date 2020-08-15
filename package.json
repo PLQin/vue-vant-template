@@ -19,7 +19,6 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
-    "core-js": "^3.6.5",
     "dayjs": "^1.8.32",
     "js-cookie": "^2.2.1",
     "vant": "^2.9.0",
