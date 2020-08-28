@@ -58,11 +58,6 @@
     "postcss-pxtorem": "^5.1.1",
     "vue-template-compiler": "^2.6.11"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "keywords": [
     "Vue",
     "vant",
@@ -70,6 +65,11 @@
     "vue-vant-template",
     "vue-vant-base"
   ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "lint-staged": {
     "src/**/*.{js,vue}": [
       "eslint --fix",
