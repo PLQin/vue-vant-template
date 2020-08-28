@@ -10,8 +10,8 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "editor.detectIndentation": false,
   "vetur.validation.template": false,
+  "editor.detectIndentation": false,
   "editor.tabSize": 2,
   "search.exclude": {
     "**/dist": true
