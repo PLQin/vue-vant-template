@@ -15,7 +15,7 @@
     "build:log": "vue-cli-service build --profile --json > build.log",
     "mock": "json-server --routes src/mock/routes.json --watch src/mock/index.js -m src/mock/middlewares.js --port 9000",
     "mock:serve": "json-server --routes src/mock/routes.json --watch src/mock/index.js -m src/mock/middlewares.js --host 0.0.0.0 --port 9000",
-    "lint": "eslint --ext .js,.vue src"
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "axios": "^0.19.2",

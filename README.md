@@ -109,6 +109,9 @@
 
 ## 😥 常见问题
 
+- （低版本）安卓浏览器样式错乱    
+  大部分，大概率是使用了css3 transform 以及 flex 布局导致的，解决办法是尽量的不使用 transform 以及将 flex布局改为 display:inline-block + float 布局
+
 - 启动项目`eslint`报 `Delete CR prettier/prettier`  
 
   这个是window 和 mac 换行符不同导致的，为了保持一致，当前系统统一制定换行符为lf，可以在导出项目之前配置
