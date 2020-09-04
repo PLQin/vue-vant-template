@@ -37,7 +37,7 @@
     "@vue/cli-plugin-eslint": "^4.4.0",
     "@vue/cli-plugin-router": "^4.4.0",
     "@vue/cli-plugin-vuex": "^4.4.0",
-    "@vue/cli-service": "^4.4.0",
+    "@vue/cli-service": "^4.5.3",
     "babel-eslint": "^10.1.0",
     "babel-plugin-import": "^1.13.0",
     "babel-plugin-jsx-v-model": "^2.0.3",
@@ -49,7 +49,6 @@
     "eslint": "^6.7.2",
     "eslint-plugin-babel": "^5.3.0",
     "eslint-plugin-vue": "^6.2.2",
-    "husky": "^4.2.5",
     "json-server": "^0.16.1",
     "less": "^3.11.3",
     "less-loader": "^6.1.1",
@@ -66,15 +65,12 @@
     "vue-vant-template",
     "vue-vant-base"
   ],
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+  "gitHooks": {
+    "pre-commit": "lint-staged"
   },
   "lint-staged": {
     "src/**/*.{js,vue}": [
-      "eslint --fix",
-      "git add"
+      "vue-cli-service lint"
     ]
   },
   "engines": {
