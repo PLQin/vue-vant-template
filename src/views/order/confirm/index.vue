@@ -115,6 +115,7 @@
 
 <script>
 import { dataDesensitization } from '@/utils/index.js'
+import NP from 'number-precision'
 import { detail } from '@/api/goods.js'
 import { createOrder } from '@/api/order.js'
 export default {
@@ -133,7 +134,7 @@ export default {
   watch: {
     stepperValue(value) {
       if (this.detail && this.detail.priceMin) {
-        this.totalPrices = (value * 10000) * this.detail.priceMin / 10000
+        this.totalPrices = NP.times(value, this.detail.priceMin)
       }
     }
   },
