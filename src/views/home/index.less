@@ -8,45 +8,16 @@ html {
   height: 100%;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  display: -webkit-flex;
-  -webkit-flex-direction: row;
-  -webkit-justify-content: flex-start;
-  -webkit-align-items: center;
   color: #fff;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  display: -webkit-flex;
-  -webkit-flex-direction: column;
-  -webkit-justify-content: flex-start;
-  -webkit-align-items: center;
   color: #fff;
 }
 
 #app {
   -webkit-overflow-scrolling: touch;
 }
-
-.iframe-content {
-  flex: 1;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  display: -webkit-flex;
-  -webkit-flex-direction: column;
-  -webkit-justify-content: flex-start;
-  -webkit-align-items: center;
 
 .my-order {
     position: absolute;
@@ -59,32 +30,20 @@ body {
     border-radius: 8px;
     font-size: 13px;
     font-weight: bold;
-    display: flex;
-    justify-content: center;
-  }
 }
 
 .download-bar {
   width: 100%;
   height: 62px;
   display: none;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  -webkit-flex-direction: row;
-  -webkit-justify-content: space-between;
-  -webkit-align-items: center;
   border-bottom: 1px solid #333;
   background: #333 repeat 0 0;
 }
 
 .download-bar .logo-container {
-  display: flex;
   width: 100%;
   height: 100%;
   margin-left: 10px;
-  flex-direction: row;
-  align-items: center;
 }
 
 .logo-container .logo {
@@ -94,9 +53,7 @@ body {
 }
 
 .logo-container .download-title {
-  display: flex;
   margin-left: 5px;
-  flex-direction: column;
   height: 100%;
   justify-content: center;
 }
@@ -140,12 +97,6 @@ body {
 
 .navigator {
   display: none;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  -webkit-flex-direction: row;
-  -webkit-justify-content: flex-start;
-  -webkit-align-items: center;
   width: 100%;
   height: 52px;
   background-color: #845d32;
@@ -156,18 +107,10 @@ body {
   position: relative;
   width: 43px;
   height: 28px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  display: -webkit-flex;
-  -webkit-flex-direction: column;
-  -webkit-align-items: center;
   margin-left: 14px;
 }
 
 .navigator-logo-img {
-  display: flex;
-  display: -webkit-flex;
   position: relative;
   right: 0;
   width: 36px;
@@ -178,42 +121,23 @@ body {
   border: 0 solid #000;
   position: relative;
   height: 31px;
-  flex: 100%;
   margin-left: 5px;
   margin-right: 15px;
   background-color: #eee;
   border-radius: 15.5px;
-  display: flex;
-  flex-direction: row;
-  align-content: flex-start;
-  align-items: center;
-  display: -webkit-flex;
   overflow: hidden;
-  -webkit-flex-direction: row;
-  -webkit-align-content: flex-start;
-  -webkit-align-items: center;
 }
 
 .navigator-search-img {
-  display: flex;
-  display: -webkit-flex;
   width: 22px;
   height: 22px;
   margin-left: 6px;
 }
 
 .navigator-search-text {
-  flex: 1;
   border: 0 solid #000;
   position: relative;
   box-sizing: border-box;
-  display: -webkit-block;
-  -webkit-box-orient: vertical;
-  flex-direction: column;
-  align-content: flex-start;
-  -webkit-flex-direction: column;
-  -webkit-align-content: flex-start;
-  flex-shrink: 0;
   font-size: 14px;
   margin-left: 2px;
   margin-right: 2px;
@@ -226,8 +150,6 @@ body {
 .navigator-msg {
   border: 0 solid #000;
   position: relative;
-  display: flex;
-  flex-direction: column;
   width: 40px;
   height: 28px;
   align-items: center;
@@ -235,7 +157,6 @@ body {
 }
 
 .navigator-msg-img {
-  display: flex;
   width: 28px;
   height: 28px;
 }
@@ -260,14 +181,6 @@ body {
   height: 50px;
   width: 100%;
   background-color: #fff;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  display: -webkit-flex;
-  -webkit-flex-direction: row;
-  -webkit-justify-content: center;
-  -webkit-align-items: center;
 }
 
 .tabbar-item {
@@ -275,14 +188,6 @@ body {
   height: 100%;
   width: 25%;
   bottom: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  display: -webkit-flex;
-  -webkit-flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-justify-content: flex-start;
 }
 
 .tabbar-cart .cart-dot {
@@ -420,22 +325,12 @@ body {
   border: 0px;
   position: relative;
   box-sizing: border-box;
-  display: flex;
-  -webkit-box-orient: vertical;
-  flex-direction: column;
-  align-content: flex-start;
-  flex-shrink: 0;
 }
 
 .item-box {
   border: 0px;
   position: relative;
   box-sizing: border-box;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  flex-direction: row;
-  align-content: flex-start;
-  flex-shrink: 0;
   cursor: pointer;
   width: 351px;
   height: 132px;
@@ -450,11 +345,6 @@ body {
   border: 0px;
   position: relative;
   box-sizing: border-box;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  flex-direction: row;
-  align-content: flex-start;
-  flex-shrink: 0;
   cursor: pointer;
   width: 351px;
   height: 132px;
@@ -466,11 +356,6 @@ body {
   border: 0px;
   position: absolute;
   box-sizing: border-box;
-  display: flex;
-  -webkit-box-orient: vertical;
-  flex-direction: column;
-  align-content: flex-start;
-  flex-shrink: 0;
   width: 120px;
   height: 120px;
   left: 3px;
@@ -478,11 +363,9 @@ body {
 }
 
 .item-img img {
-  display: flex;
   width: 120px;
   height: 120px;
   box-sizing: border-box;
-  object-fit: contain;
   filter: blur(0px);
 }
 
@@ -491,11 +374,6 @@ body {
   border: 0px;
   position: static;
   box-sizing: border-box;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  flex-direction: column;
-  align-content: flex-start;
-  flex-shrink: 0;
   font-size: 15px;
   margin-top: 10px;
   width: 209px;
@@ -510,43 +388,16 @@ body {
   border: 0px;
   position: absolute;
   box-sizing: border-box;
-  display: flex;
-  -webkit-box-orient: vertical;
-  flex-direction: column;
-  align-content: flex-start;
-  flex-shrink: 0;
   left: 6px;
   top: 0px;
   width: 22px;
   height: 24px;
 }
 
-.elem-0 {
-  border: 0px;
-  position: relative;
-  box-sizing: border-box;
-  display: flex;
-  -webkit-box-orient: vertical;
-  flex-direction: column;
-  align-content: flex-start;
-  flex: 1 1 0%;
-  -webkit-box-flex: 1;
-  overflow: hidden;
-  height: 0px;
-  background-color: #414b6e;
-  margin-top: -0.5px;
-}
-
 .elem-1 {
   border: 0px;
   position: relative;
   box-sizing: border-box;
-  display: flex;
-  -webkit-box-orient: vertical;
-  flex-direction: column;
-  align-content: flex-start;
-  flex: 1 1 0%;
-  -webkit-box-flex: 1;
   overflow: hidden scroll;
 }
 
@@ -556,20 +407,12 @@ body {
   box-sizing: border-box;
   display: block;
   -webkit-box-orient: vertical;
-  flex-direction: column;
-  align-content: flex-start;
-  flex-shrink: 0;
 }
 
 .elem-3 {
   border: 0px;
   position: relative;
   box-sizing: border-box;
-  display: flex;
-  -webkit-box-orient: vertical;
-  flex-direction: column;
-  align-content: flex-start;
-  flex-shrink: 0;
   background-color: rgb(1, 23, 47);
 }
 
@@ -577,27 +420,17 @@ body {
   border: 0px;
   position: relative;
   box-sizing: border-box;
-  display: flex;
-  -webkit-box-orient: vertical;
-  flex-direction: column;
-  place-content: flex-start;
-  flex-shrink: 0;
   cursor: pointer;
   width: 100%;
-  -webkit-box-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
   height: 257.5px;
   margin-bottom: 0px;
 }
 
 .elem-5 {
-  display: flex;
   width: 100%;
   height: 257.5px;
   background-color: transparent;
   box-sizing: border-box;
-  object-fit: cover;
   filter: blur(0px);
 }
 
@@ -605,11 +438,6 @@ body {
   border: 0px;
   position: relative;
   box-sizing: border-box;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  flex-direction: row;
-  align-content: flex-start;
-  flex-shrink: 0;
   cursor: pointer;
   width: 351px;
   height: 132px;
@@ -618,11 +446,9 @@ body {
 }
 
 .elem-8 {
-  display: flex;
   width: 22px;
   height: 24px;
   box-sizing: border-box;
-  object-fit: contain;
   filter: blur(0px);
 }
 
@@ -630,11 +456,6 @@ body {
   border: 0px;
   position: absolute;
   box-sizing: border-box;
-  display: flex;
-  -webkit-box-orient: vertical;
-  flex-direction: column;
-  align-content: flex-start;
-  flex-shrink: 0;
   width: 209px;
   height: 132px;
   left: 129px;
@@ -645,15 +466,7 @@ body {
   border: 0px;
   position: static;
   box-sizing: border-box;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  flex-direction: row;
-  place-content: flex-start;
-  flex-shrink: 0;
   margin-top: 4.5px;
-  -webkit-box-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
   height: 16px;
 }
 
@@ -664,9 +477,6 @@ body {
   box-sizing: border-box;
   display: block;
   -webkit-box-orient: vertical;
-  flex-direction: column;
-  align-content: flex-start;
-  flex-shrink: 0;
   font-size: 11px;
   color: rgb(125, 68, 2);
   padding-right: 4px;
@@ -681,11 +491,7 @@ body {
   border: 0px;
   position: static;
   box-sizing: border-box;
-  display: flex;
   -webkit-box-orient: horizontal;
-  flex-direction: row;
-  align-content: flex-start;
-  flex-shrink: 0;
   margin-top: 5px;
   -webkit-box-align: center;
   align-items: center;
@@ -695,15 +501,7 @@ body {
   border: 0px;
   position: static;
   box-sizing: border-box;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  flex-direction: row;
-  place-content: flex-start center;
-  flex-shrink: 0;
   height: 17px;
-  -webkit-box-pack: center;
-  -webkit-box-align: center;
-  align-items: center;
   border-radius: 4px;
   padding-right: 8px;
   background-image: linear-gradient(to right, rgb(250, 230, 191), rgb(253, 237, 216));
@@ -713,22 +511,15 @@ body {
   border: 0px;
   position: static;
   box-sizing: border-box;
-  display: flex;
-  -webkit-box-orient: vertical;
-  flex-direction: column;
-  align-content: flex-start;
-  flex-shrink: 0;
   width: 40px;
   height: 17px;
   margin-left: -1px;
 }
 
 .elem-15 {
-  display: flex;
   width: 40px;
   height: 17px;
   box-sizing: border-box;
-  object-fit: contain;
   filter: blur(0px);
 }
 
@@ -738,10 +529,6 @@ body {
   position: static;
   box-sizing: border-box;
   display: block;
-  -webkit-box-orient: vertical;
-  flex-direction: column;
-  align-content: flex-start;
-  flex-shrink: 0;
   font-size: 11px;
   color: rgb(125, 68, 2);
   padding-left: 8px;
@@ -755,11 +542,6 @@ body {
   border: 0px;
   position: absolute;
   box-sizing: border-box;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  flex-direction: row;
-  align-content: flex-start;
-  flex-shrink: 0;
   left: 129px;
   top: 90px;
   width: 208px;
@@ -772,9 +554,6 @@ body {
   margin-top: 0px;
   margin-bottom: 0px;
   -webkit-box-orient: horizontal;
-  flex-direction: row;
-  -webkit-box-align: end;
-  align-items: flex-end;
 }
 
 .elem-19 {
@@ -807,11 +586,6 @@ body {
   border: 0px;
   position: absolute;
   box-sizing: border-box;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  flex-direction: row;
-  align-content: flex-start;
-  flex-shrink: 0;
   right: 12px;
   top: 105px;
   height: 22px;
@@ -821,11 +595,6 @@ body {
   border: 0.5px solid rgb(217, 107, 108);
   position: relative;
   box-sizing: border-box;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  flex-direction: row;
-  place-content: flex-start center;
-  flex-shrink: 0;
   height: 16px;
   -webkit-box-align: center;
   align-items: center;
@@ -847,9 +616,6 @@ body {
   box-sizing: border-box;
   display: block;
   -webkit-box-orient: vertical;
-  flex-direction: column;
-  place-content: flex-start center;
-  flex-shrink: 0;
   font-size: 11px;
   color: rgb(255, 255, 255);
   -webkit-box-align: center;
@@ -862,15 +628,7 @@ body {
   border: 0px;
   position: static;
   box-sizing: border-box;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  flex-direction: row;
-  place-content: flex-start center;
-  flex-shrink: 0;
   height: 17px;
-  -webkit-box-pack: center;
-  -webkit-box-align: center;
-  align-items: center;
   border-radius: 4px;
   padding-right: 8px;
   background-image: linear-gradient(to right, rgb(255, 245, 231), rgb(255, 245, 231));
@@ -887,11 +645,6 @@ body {
   border: 0px;
   position: relative;
   box-sizing: border-box;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  flex-direction: row;
-  place-content: flex-start center;
-  flex-shrink: 0;
   height: 160px;
   -webkit-box-pack: center;
   -webkit-box-align: center;
@@ -903,11 +656,6 @@ body {
   border: 0px;
   position: relative;
   box-sizing: border-box;
-  display: flex;
-  -webkit-box-orient: vertical;
-  flex-direction: column;
-  align-content: flex-start;
-  flex-shrink: 0;
   height: 1px;
   width: 50px;
   background-color: rgb(153, 153, 153);
@@ -919,12 +667,12 @@ body {
   position: relative;
   box-sizing: border-box;
   display: block;
-  -webkit-box-orient: vertical;
-  flex-direction: column;
-  align-content: flex-start;
-  flex-shrink: 0;
   font-size: 13px;
   margin-left: 6px;
   margin-right: 6px;
   color: rgb(153, 153, 153);
+}
+
+.item-list{
+  padding-top: 10px;
 }

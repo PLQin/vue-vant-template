@@ -17,8 +17,9 @@ export default {
 <style lang="less">
 .zj-loading {
   z-index: 9999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
+  .van-loading{
+    top: 40%;
+  }
 }
 </style>

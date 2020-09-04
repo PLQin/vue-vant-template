@@ -102,52 +102,13 @@
       </div>
     </div>
 
-    <div
-      class="rn-1awozwy rn-6st0mw rn-6koalj rn-1qe8dj5 rn-1mlwlqe rn-18u37iz rn-11ti67c rn-1wtj0ep rn-1mnahxq rn-61z16t rn-p1pxzi rn-11wrixw rn-ifefl9 rn-bcqeeo rn-wk8lta rn-9aemit rn-1mdbw0j rn-gy4na3 rn-bnwqim rn-ga31ov rn-c97pre elem-23"
-    >
-      <div
-        class="rn-1awozwy rn-6koalj rn-1qe8dj5 rn-1mlwlqe rn-18u37iz rn-1jcaaag rn-1wtj0ep rn-1mnahxq rn-p1pxzi rn-2q97c rn-ouo632 rn-ifefl9 rn-bcqeeo rn-wk8lta rn-9aemit rn-1mdbw0j rn-gy4na3 rn-bnwqim rn-1lgpqti"
-      >
-        <div
-          class="elem-369 rn-1awozwy rn-1loqt21 rn-6koalj rn-1qe8dj5 rn-1mlwlqe rn-eqz5dr rn-1h3ijdo rn-1777fci rn-1mnahxq rn-61z16t rn-p1pxzi rn-13hce6t rn-ifefl9 rn-bcqeeo rn-wk8lta rn-9aemit rn-1mdbw0j rn-gy4na3 rn-bnwqim rn-1otgn73 rn-sr1h2r rn-1lgpqti"
-        >
-          <div class="elem-369-1">
-            <span class="elem-369-tips">Total：</span>
-            <span class="elem-369-price">{{ totalPrices }}</span>
-            <span class="elem-currency">{{ detail.currency }}</span>
-          </div>
-        </div>
+    <div class="footer">
+      <div class="elem-369-1">
+        <span class="elem-369-tips">Total：</span>
+        <span class="elem-369-price">{{ totalPrices }}</span>
+        <span class="elem-currency">{{ detail.currency }}</span>
       </div>
-
-      <div
-        class="rn-1awozwy rn-6koalj rn-16y2uox rn-1wbh5a2 rn-1ro0kt6 rn-18u37iz rn-1jcaaag rn-1777fci rn-1mnahxq rn-61z16t rn-p1pxzi rn-11wrixw rn-ifefl9 rn-bcqeeo rn-wk8lta rn-1mdbw0j rn-1xevv56 rn-14s2xll rn-bnwqim rn-1lgpqti"
-      >
-        <div
-          class="rn-1oszu61 rn-6koalj rn-16y2uox rn-1wbh5a2 rn-1ro0kt6 rn-18u37iz rn-1mnahxq rn-61z16t rn-p1pxzi rn-11wrixw rn-ifefl9 rn-bcqeeo rn-wk8lta rn-9aemit rn-1mdbw0j rn-gy4na3 rn-bnwqim rn-1lgpqti"
-        >
-          <div
-            class="rn-1awozwy rn-15go85j rn-v2x0ok rn-1se7c1 rn-1t4sb3n rn-opq7vk rn-6koalj rn-16y2uox rn-1wbh5a2 rn-1ro0kt6 rn-18u37iz rn-1777fci rn-1mnahxq rn-61z16t rn-11wrixw  rn-ifefl9 rn-bcqeeo rn-wk8lta rn-9aemit rn-1mdbw0j rn-gy4na3 rn-bnwqim rn-1lgpqti"
-          >
-            <div
-              class="rn-1oszu61 rn-1loqt21 rn-6koalj rn-16y2uox rn-1wbh5a2 rn-1ro0kt6 rn-eqz5dr rn-1mnahxq rn-61z16t rn-p1pxzi rn-11wrixw rn-ifefl9 rn-bcqeeo rn-wk8lta rn-9aemit rn-1mdbw0j rn-gy4na3 rn-bnwqim rn-1otgn73 rn-1lgpqti"
-            >
-              <div
-                class="rn-1awozwy rn-1t4sb3n rn-1se7c1 rn-6koalj rn-16y2uox rn-1wbh5a2 rn-1ro0kt6 rn-eqz5dr rn-1a8msfu rn-1777fci rn-1mnahxq rn-61z16t rn-p1pxzi rn-11wrixw rn-ifefl9 rn-bcqeeo rn-wk8lta rn-9aemit rn-1mdbw0j rn-gy4na3 rn-bnwqim rn-1lgpqti"
-              >
-                <div
-                  class="rn-1awozwy rn-1t4sb3n rn-1p0dtai rn-6koalj rn-16y2uox rn-1wbh5a2 rn-1ro0kt6 rn-eqz5dr rn-1a8msfu rn-1777fci rn-1d2f490 rn-1mnahxq rn-61z16t rn-p1pxzi rn-11wrixw rn-ifefl9 rn-bcqeeo rn-wk8lta rn-9aemit rn-1mdbw0j rn-gy4na3 rn-u8s1d rn-zchlnj rn-ipm5af rn-1lgpqti elem-27"
-                >
-                  <div
-                    dir="auto"
-                    class="submit-order rn-jwli3a rn-1471scf rn-14xgk7a rn-o11vmf rn-ebii48  rn-t9a87b rn-61z16t rn-p1pxzi rn-11wrixw rn-1mnahxq rn-dnmrzs rn-11yh6sk rn-buy8e9 rn-wk8lta rn-9aemit rn-1mdbw0j rn-gy4na3 rn-q4m81j rn-bauka4 rn-1udbk01 rn-3s2u2q rn-qvutc0"
-                    @click="onSubmitOrder"
-                  >Confirm</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="elem-369-2" @click="onSubmitOrder">Confirm</div>
     </div>
   </div>
 </template>
