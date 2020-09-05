@@ -1,7 +1,7 @@
 
 <template>
   <div id="app">
-    <transition :name="transitionName" mode="out-in">
+    <transition :name="transitionName">
       <router-view class="router" />
     </transition>
   </div>
@@ -16,9 +16,11 @@ export default {
   created() {
     // 前进后退, 切入切出效果
     // this.$navigation.on('forward', () => {
+    //   // 左滑进入
     //   this.transitionName = 'van-slide-right'
     // })
     // this.$navigation.on('back', () => {
+    //   // 右滑进入
     //   this.transitionName = 'van-slide-left'
     // })
   }
