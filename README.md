@@ -112,6 +112,19 @@
 - （低版本）安卓浏览器样式错乱    
   大部分，大概率是使用了css3 transform 以及 flex 布局导致的，解决办法是尽量的不使用 transform 以及将 flex布局改为 display:inline-block + float 布局
 
+- Safari 浏览器右滑屏幕出现闪屏    
+safari 浏览器存在这个问题，右滑屏幕返回到上一页时将重新刷新页面。但是safari仍然保存着上一页滚动条的位置，所以这导致出现一个闪屏的bug。    
+设置页面切换时滚动条的位置初步的解决了此问题：    
+  ```
+  // src\router\index.js
+  
+  const router = new VueRouter({
+    routes,
+    // 页面滚动行为
+    scrollBehavior: () => ({ x: 0, y: 0 })
+  })
+  ```
+
 - 启动项目`eslint`报 `Delete CR prettier/prettier`  
 
   这个是window 和 mac 换行符不同导致的，为了保持一致，当前系统统一制定换行符为lf，可以在导出项目之前配置
