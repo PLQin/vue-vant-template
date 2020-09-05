@@ -1,9 +1,11 @@
 
 module.exports = {
   plugins: {
-    autoprefixer: {
-      browsers: ['Android >= 4.0', 'iOS >= 8']
-    }
+    // The autoprefixer (and many other tools) need to know what browsers you want to support. The best-practice is to configure this directly in your package.json (so that all the tools can read this):
+    // https://github.com/postcss/autoprefixer
+    // autoprefixer: {
+    //   browsers: ['Android >= 4.0', 'iOS >= 8']
+    // }
 
     // https://vant-contrib.gitee.io/vant/#/zh-CN/quickstart#jin-jie-yong-fa
     // 'postcss-px-to-viewport': {
