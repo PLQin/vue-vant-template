@@ -89,7 +89,7 @@ const routes = [
 const router = new VueRouter({
   routes,
   // 页面滚动行为
-  scrollBehavior: () => ({ y: 0 })
+  scrollBehavior: () => ({ x: 0, y: 0 })
 })
 
 router.beforeEach((to, from, next) => {
