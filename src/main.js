@@ -3,6 +3,7 @@ import Vue from 'vue'
 // Vant
 import Vant from 'vant'
 import 'vant/lib/index.css'
+import '@/style/variables.scss'
 Vue.use(Vant)
 
 import App from './App.vue'

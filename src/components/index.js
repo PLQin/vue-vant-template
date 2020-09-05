@@ -9,8 +9,8 @@ const components = files.keys().map(key => {
   return files(key).default
 })
 
-components.forEach(key => {
-  if (key.name) {
-    Vue.component(key.name, key)
+components.forEach(component => {
+  if (component.name) {
+    Vue.component(component.name, component)
   }
 })
