@@ -17,7 +17,9 @@ module.exports = {
   ],
   plugins: [
     // 让系统支持可选链
+    // https://www.babeljs.cn/docs/babel-plugin-proposal-optional-chaining
     '@babel/plugin-proposal-optional-chaining',
+
     ...prodPlugin
   ]
 }
