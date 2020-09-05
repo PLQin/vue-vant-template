@@ -1,7 +1,7 @@
 // 记录所有cdn的路径，生产环境使用，可根据生产环境不同切换不同的cdn数据源
 module.exports = {
   // 是否启用CDN
-  enable: true,
+  enable: false,
   JS: {
     vue: {
       url: 'https://cdn.bootcss.com/vue/2.6.11/vue.min.js',
