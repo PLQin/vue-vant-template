@@ -23,6 +23,7 @@ module.exports = {
       )
     }
   },
+
   chainWebpack: config => {
     // 项目标题
     config.plugin('html').tap(args => {
@@ -31,21 +32,25 @@ module.exports = {
     })
     webpackConfig(config)
   },
-  productionSourceMap: false, // 生产环境不需要 source map
-  publicPath: !isProd ? '/' : '',
+
+  // 生产环境不需要 source map
+  // https://cli.vuejs.org/zh/config/#productionsourcemap
+  productionSourceMap: false,
+
+  // sass-loader
+  // https://vue-loader.vuejs.org/zh/guide/pre-processors.html#sass
   css: {
-    extract: !!isProd, // 是否将css 提取到独立的文件,生产环境提取，开发环境不提取
-    sourceMap: !isProd, // 开发模式开启css sourcemap
+    extract: false,
+    sourceMap: true,
     loaderOptions: {
-      less: {
-        lessOptions: {
-          modifyVars: {
-            hack: 'true;@import "~@/style/_variables.less"'
-          }
+      sass: {
+        sassOptions: {
+          //
         }
       }
     }
   },
+
   devServer: {
     proxy: {
       '^/mock': {
@@ -63,5 +68,9 @@ module.exports = {
         }
       }
     }
-  }
+  },
+
+  // 设置为 true 后你就可以在 Vue 组件中使用 template 选项了，但是这会让你的应用额外增加 10kb 左右。
+  // https://cli.vuejs.org/zh/config/#runtimecompiler
+  runtimeCompiler: true
 }

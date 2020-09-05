@@ -229,5 +229,5 @@ export default {
 }
 </script>
 
-<style lang="less" scoped src="./index.less"></style>
+<style lang="scss" scoped src="./index.scss"></style>
 

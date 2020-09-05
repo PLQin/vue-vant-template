@@ -14,7 +14,7 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style lang="scss">
 .zj-loading {
   z-index: 9999;
   text-align: center;
