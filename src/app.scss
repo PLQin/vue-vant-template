@@ -5,9 +5,26 @@
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
   min-height: 100vh;
+  position: relative;
+  -webkit-overflow-scrolling: touch;
 
   // https://www.zhangxinxu.com/wordpress/2018/10/scroll-behavior-scrollintoview-平滑滚动/
   scroll-behavior: smooth;
+}
+
+@media screen and (min-width: 980px) {
+  #app {
+    width: 500px;
+    margin: 0 auto;
+  }
+  
+  .footer-button,
+  .footer-button,
+  .van-nav-bar--fixed {
+    width: 500px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 /** 解决路由切换动画上下闪动问题 */

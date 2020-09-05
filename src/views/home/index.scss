@@ -15,10 +15,6 @@ body {
   color: #fff;
 }
 
-#app {
-  -webkit-overflow-scrolling: touch;
-}
-
 .my-order {
     position: absolute;
     right: 20px;
@@ -325,6 +321,7 @@ body {
   border: 0px;
   position: relative;
   box-sizing: border-box;
+  margin: 10px 0 0 0;
 }
 
 .item-box {
@@ -332,13 +329,11 @@ body {
   position: relative;
   box-sizing: border-box;
   cursor: pointer;
-  width: 351px;
-  height: 132px;
   border-radius: 6px;
   background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255));
   margin-bottom: 6.624px;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 90%;
+  margin: 0 auto;
 }
 
 .item-card {
@@ -414,23 +409,14 @@ body {
   position: relative;
   box-sizing: border-box;
   background-color: rgb(1, 23, 47);
-}
-
-.elem-4 {
-  border: 0px;
-  position: relative;
-  box-sizing: border-box;
-  cursor: pointer;
-  width: 100%;
-  height: 257.5px;
-  margin-bottom: 0px;
+  font-size: 0;
 }
 
 .elem-5 {
   width: 100%;
-  height: 257.5px;
   background-color: transparent;
   box-sizing: border-box;
+  min-height: 230px;
   filter: blur(0px);
 }
 
@@ -439,7 +425,7 @@ body {
   position: relative;
   box-sizing: border-box;
   cursor: pointer;
-  width: 351px;
+  width: 100%;
   height: 132px;
   border-radius: 6px;
   background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 251, 235));
@@ -674,5 +660,5 @@ body {
 }
 
 .item-list{
-  padding-top: 10px;
+  // padding-top: 10px;
 }

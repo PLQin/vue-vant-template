@@ -9,10 +9,8 @@
         <div class="elem-2">
           <!-- empty -->
           <div class="elem-3">
-            <div class="elem-4">
-              <img src="@/assets/home/nav.jpg" class="elem-5">
-              <!-- empty -->
-            </div>
+            <img src="@/assets/home/nav.jpg" class="elem-5">
+            <!-- empty -->
           </div>
           <div id="item-list" class="item-list">
             <div v-for="(item, index) in list" :key="index" class="item-content">
