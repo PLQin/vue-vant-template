@@ -3,7 +3,7 @@ import Vue from 'vue'
 // Vant
 import Vant from 'vant'
 import 'vant/lib/index.css'
-import '@/style/variables.scss'
+import '@/style/custom.scss'
 Vue.use(Vant)
 
 import App from './App.vue'
@@ -20,6 +20,7 @@ import '@/components/index.js'
 // 时间日期
 import dayjs from 'dayjs'
 const dayjsUtc = require('dayjs/plugin/utc')
+dayjs.locale('zh')
 dayjs.extend(dayjsUtc)
 Vue.prototype.$moment = dayjs
 

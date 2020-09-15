@@ -85,9 +85,6 @@
   # 其他人员配置开发环境(这样的话，各开发人员之间配置互不冲突)
   npm run serve:local
 
-  # 启动开发环境(接口地址将指向测试数据的接口)
-  npm run serve:mock
-
   # 打包
   npm run build
 
@@ -96,9 +93,6 @@
 
   # 启动json-server提供测试数据
   npm run mock
-
-  # 启动json-server提供测试数据（在服务器中）
-  npm run mock:serve
 
   # 代码校验
   npm run lint
@@ -115,9 +109,9 @@
 - （低版本）安卓浏览器样式错乱    
   大部分，大概率是使用了css3 transform 以及 flex 布局导致的，解决办法是尽量的不使用 transform 以及将 flex布局改为 display:inline-block + float 布局
 
-- Safari 浏览器右滑屏幕出现闪屏    
-safari 浏览器存在这个问题，右滑屏幕返回到上一页时将重新刷新页面。但是safari仍然保存着上一页滚动条的位置，所以这导致出现一个闪屏的bug。    
-设置页面切换时滚动条的位置初步的解决了此问题：    
+- Safari 浏览器右滑屏幕出现闪屏/白屏     
+safari 浏览器存在这个问题，右滑屏幕返回到上一页时将重新刷新页面。但是safari仍然保存着上一页滚动条的位置，这导致了一个闪屏的bug。    
+设置页面切换时滚动条的位置并 [弃用Vue Transition](https://github.com/vuejs/vue/issues/5533) 初步的解决了此问题：    
   ```
   // src\router\index.js
   
@@ -127,6 +121,10 @@ safari 浏览器存在这个问题，右滑屏幕返回到上一页时将重新�
     scrollBehavior: () => ({ x: 0, y: 0 })
   })
   ```
+
+- Safari 浏览器右滑屏幕返回到上一页时卡顿     
+[TODO] GitHub 移动端没有这个问题，初步观察当github点击返回按钮时正常返回，右滑返回时刷新了一次页面。     
+尝试设置服务端 'Cache-Control', 'no-cache, max-age=0, must-revalidate, no-store' 或许有用    
 
 
 ## 🔑 环境配置

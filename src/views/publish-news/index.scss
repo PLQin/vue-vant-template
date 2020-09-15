@@ -1,0 +1,23 @@
+/deep/ .interval {
+  height: 10px;
+}
+
+/deep/ .long-hint {
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  .van-tag {
+    margin-left: 4px;
+  }
+}
+
+/deep/ .open-floor {
+  height: 30px;
+}
+
+/deep/ .please-agree-user-agreement {
+  padding: 8px 16px;
+  .active {
+    color: $text-active-color;
+  }
+}

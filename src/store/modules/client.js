@@ -3,7 +3,7 @@ const state = {
 }
 
 const mutations = {
-  CREATE_CLIENT_ID: (state, clientId) => {
+  SET_CLIENT_ID: (state, clientId) => {
     state.clientId = clientId
     localStorage.setItem('clientId', clientId)
   }
@@ -11,7 +11,7 @@ const mutations = {
 
 const actions = {
   setClientId({ commit, state }, clientId) {
-    commit('CREATE_CLIENT_ID', clientId)
+    commit('SET_CLIENT_ID', clientId)
   }
 }
 

@@ -1,14 +1,7 @@
-
-const webpackConfig = require('./config/webpack.config.js')
 const isProd = process.env.NODE_ENV === 'production'
 
 // gzip
 const CompressionWebpackPlugin = require('compression-webpack-plugin')
-
-// Configure the proxy address, which can also be set .env
-// When used with mock services, devServerProxyTarget is required. Otherwise, TypeError: Cannot read property 'upgrade' of undefined
-// https://segmentfault.com/q/1010000020916388
-const devServerProxyTarget = 'http://149.129.114.76:9000'
 
 module.exports = {
   configureWebpack: config => {
@@ -26,11 +19,14 @@ module.exports = {
 
   chainWebpack: config => {
     // 项目标题
-    config.plugin('html').tap(args => {
-      args[0].title = '首页'
-      return args
-    })
-    webpackConfig(config)
+    config
+      .plugin('html')
+      .tap(args => {
+        args[0].template = './static/index.html'
+        args[0].favicon = './static/favicon.ico'
+        args[0].title = '首页'
+        return args
+      })
   },
 
   // 生产环境不需要 source map
@@ -44,30 +40,25 @@ module.exports = {
     sourceMap: true,
     loaderOptions: {
       sass: {
-        sassOptions: {
-          //
-        }
+        // https://webpack.docschina.org/loaders/sass-loader/#options
+        // https://webpack.docschina.org/loaders/sass-loader/#additionaldata
+        // https://cli.vuejs.org/guide/css.html#passing-options-to-pre-processor-loaders
+        additionalData: '@import "~@/style/variables.scss";'
       }
     }
   },
 
   devServer: {
-    proxy: {
-      '^/mock': {
-        target: process.env.VUE_APP_MOCK_BASE_URL || devServerProxyTarget,
-        changeOrigin: false,
-        pathRewrite: {
-          '^/mock': '/mock'
-        }
-      },
-      '^/': {
-        target: devServerProxyTarget,
-        changeOrigin: false,
-        pathRewrite: {
-          '^/': ''
-        }
-      }
-    }
+    // proxy: {
+    //   '^/': {
+    //     target: process.env.VUE_APP_BASE_API,
+    //     changeOrigin: false, // 是否在本地虚拟一个服务器接受并代发请求
+    //     secure: false, // 是否拒绝使用了无效证书（ssl）的后端服务器
+    //     pathRewrite: {
+    //       '^/': ''
+    //     }
+    //   }
+    // }
   },
 
   // 设置为 true 后你就可以在 Vue 组件中使用 template 选项了，但是这会让你的应用额外增加 10kb 左右。

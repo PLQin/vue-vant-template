@@ -9,12 +9,9 @@
   },
   "scripts": {
     "serve": "vue-cli-service serve",
-    "serve:mock": "vue-cli-service serve --mode mock",
-    "serve:local": "vue-cli-service serve --mode local",
     "build": "vue-cli-service build",
     "build:log": "vue-cli-service build --profile --json > build.log",
-    "mock": "json-server --routes src/mock/routes.json --watch src/mock/index.js -m src/mock/middlewares.js --port 9000",
-    "mock:serve": "json-server --routes src/mock/routes.json --watch src/mock/index.js -m src/mock/middlewares.js --host 0.0.0.0 --port 9000",
+    "mock": "node mock/start.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -44,6 +41,7 @@
     "lint-staged": "^10.2.11",
     "mockjs": "^1.1.0",
     "node-sass": "^4.14.1",
+    "nodemon": "^2.0.4",
     "sass-loader": "^10.0.2",
     "vue-template-compiler": "^2.6.11"
   },

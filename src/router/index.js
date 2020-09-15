@@ -27,43 +27,19 @@ const routes = [
     }
   },
   {
-    path: '/goods/detail',
-    name: 'GoodsDetail',
-    component: () => import('@/views/goods/detail/index.vue'),
+    path: '/publish-news',
+    name: 'publish-news',
+    component: () => import('@/views/publish-news/index.vue'),
     meta: {
-      title: 'Goods Detail'
+      title: '发布信息'
     }
   },
   {
-    path: '/address',
-    name: 'Address',
-    component: () => import('@/views/address/index.vue'),
+    path: '/user-agreement',
+    name: 'user-agreement',
+    component: () => import('@/views/user-agreement/index.vue'),
     meta: {
-      title: 'Shipping address'
-    }
-  },
-  {
-    path: '/order/confirm',
-    name: 'OrderConfirm',
-    component: () => import('@/views/order/confirm/index.vue'),
-    meta: {
-      title: 'Order Confirm'
-    }
-  },
-  {
-    path: '/order/detail',
-    name: 'OrderDetail',
-    component: () => import('@/views/order/detail/index.vue'),
-    meta: {
-      title: 'Order Details'
-    }
-  },
-  {
-    path: '/order/list',
-    name: 'OrderList',
-    component: () => import('@/views/order/list/index.vue'),
-    meta: {
-      title: 'My Orders'
+      title: '用户协议'
     }
   },
   // 无权限页面

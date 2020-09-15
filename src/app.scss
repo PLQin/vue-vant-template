@@ -1,5 +1,18 @@
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
 #app {
   font-family: PingFangSC-Regular;
+  font-size: 14px;
   background-color: #f1f3f5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -17,7 +30,7 @@
     width: 500px;
     margin: 0 auto;
   }
-  
+
   .footer-button,
   .footer-button,
   .van-nav-bar--fixed {

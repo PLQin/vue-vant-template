@@ -1,29 +1,16 @@
 
 <template>
   <div id="app">
-    <transition :name="transitionName">
-      <router-view class="router" />
-    </transition>
+    <router-view class="router" />
   </div>
 </template>
+
 <script>
 export default {
   data() {
-    return {
-      transitionName: 'van-slide-right'
-    }
+    return {}
   },
-  created() {
-    // 前进后退, 切入切出效果
-    // this.$navigation.on('forward', () => {
-    //   // 左滑进入
-    //   this.transitionName = 'van-slide-right'
-    // })
-    // this.$navigation.on('back', () => {
-    //   // 右滑进入
-    //   this.transitionName = 'van-slide-left'
-    // })
-  }
+  created() {}
 }
 </script>
 
