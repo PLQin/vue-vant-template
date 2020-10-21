@@ -3,8 +3,10 @@ import Vue from 'vue'
 // Vant
 import Vant from 'vant'
 import 'vant/lib/index.css'
-import '@/style/custom.scss'
+import '@/style/index.scss'
 Vue.use(Vant)
+
+import '@/utils/vue-click.js' // vue click
 
 import App from './App.vue'
 import store from './store'
@@ -16,6 +18,12 @@ Vue.use(BaseComponent, {})
 
 // 业务自定义组件
 import '@/components/index.js'
+
+// register global utility filters
+import * as filters from './filters' // global filters
+Object.keys(filters).forEach(key => {
+  Vue.filter(key, filters[key])
+})
 
 // 时间日期
 import dayjs from 'dayjs'

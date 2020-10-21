@@ -8,11 +8,17 @@ const service = axios.create({
   timeout: 5000 // request timeout
 })
 
+const defaultParams = {
+  api_version: '1.0.0',
+  ts: Math.round(new Date() / 1000)
+}
+
 // request interceptor
 service.interceptors.request.use(
   config => {
     // 在请求发出之前进行一些操作
     // config.headers['x-access-appid'] = 'ty9fd2848a039abbbb'
+    config.data = Object.assign({}, defaultParams)
 
     return config
   },
