@@ -1,10 +1,15 @@
 import axios from 'axios'
 import { Toast } from 'vant'
 
+import { get as getLanguage } from '@/utils/language.js'
+
 const service = axios.create({
   baseURL: process.env.VUE_APP_BASE_API || '/', // url = baseURL + request url
-  // withCredentials: true, // send cookies when cross-domain requests
-  // headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8' },
+  withCredentials: true, // send cookies when cross-domain requests
+  headers: {
+    'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8',
+    'Accept-Language': getLanguage()
+  },
   timeout: 5000 // request timeout
 })
 
@@ -18,7 +23,7 @@ service.interceptors.request.use(
   config => {
     // 在请求发出之前进行一些操作
     // config.headers['x-access-appid'] = 'ty9fd2848a039abbbb'
-    config.data = Object.assign({}, defaultParams)
+    config.data = Object.assign({}, defaultParams, config.data)
 
     return config
   },

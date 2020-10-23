@@ -1,3 +1,4 @@
+import { set as setLanguage } from '@/utils/language.js'
 
 import Vue from 'vue'
 import VueRouter from 'vue-router'
@@ -69,7 +70,11 @@ const router = new VueRouter({
 })
 
 router.beforeEach((to, from, next) => {
+  const { language } = to.query
+  if (language) setLanguage(language)
+
   document.title = to.meta.title || '\u200E'
+
   next()
 })
 
