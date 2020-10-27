@@ -9,7 +9,7 @@ axios.defaults.headers.common['Accept-Language'] = getLanguage()
 const service = axios.create({
   // baseURL: process.env.NODE_ENV === 'production' ? process.env.VUE_APP_BASE_API : '/', // url = baseURL + request url
 
-  // https://blog.csdn.net/HermitSun/article/details/100797223
+  // 参考 : https://blog.csdn.net/HermitSun/article/details/100797223
   // withCredentials: true, // send cookies when cross-domain requests
 
   // axios 其实会给请求自动转码, 一般来说不需要进行额外的设置
