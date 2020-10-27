@@ -6,6 +6,8 @@ import 'vant/lib/index.css'
 import '@/style/index.scss'
 Vue.use(Vant)
 
+import i18n from '@/locales/index.js'
+
 import '@/utils/vue-click.js' // vue click
 
 import App from './App.vue'
@@ -61,6 +63,7 @@ Vue.config.productionTip = false
 
 new Vue({
   router,
+  i18n,
   store,
   render: h => h(App)
 }).$mount('#app')

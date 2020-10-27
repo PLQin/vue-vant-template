@@ -12,9 +12,9 @@ unifyModules()
 
 function setModuleJson() {
   cnKeys = {}
-  readFileList(`${dir}\\pages`)
+  readFileList(`${dir}\\src\\views`)
   getLangs().forEach(lang => {
-    const file = `${dir}\\locales\\${lang}.json`
+    const file = `${dir}\\src\\locales\\${lang}.json`
     const oriJson = JSON.parse(String(fs.readFileSync(file)))
 
     Object.keys(cnKeys).filter(item => !oriJson[item]).forEach(item => {
@@ -47,19 +47,16 @@ function unifyModules() {
   })
 
   getLangs().forEach(lang => {
-    const file = `${dir}\\locales\\${lang}.json`
+    const file = `${dir}\\src\\locales\\${lang}.json`
     const langData = Object.assign({}, allKey, result[lang])
     fs.writeFileSync(file, JSON.stringify(langData, null, 2))
   })
 }
 
 function getLangs() {
-  const locales = `${dir}\\locales`
-  const indexContent = String(fs.readFileSync(`${locales}\\index.js`))
-
-  const reg = /readDir = \[(.*?)\]/
-  return reg.exec(indexContent)[1].replace(/'/g, '')
-    .split(',').map(item => item.trim())
+  const locales = `${dir}\\src\\locales`
+  const langs = fs.readdirSync(`${locales}/`).filter(item => item.includes('.json')).map(item => item.split('.json')[0])
+  return langs
 }
 
 function readFileList(dir) {
