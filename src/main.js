@@ -10,6 +10,8 @@ import i18n from '@/locales/index.js'
 
 import '@/utils/vue-click.js' // vue click
 
+import './directive/index.js' // vue directive
+
 import App from './App.vue'
 import store from './store'
 import router from './router'
@@ -39,7 +41,7 @@ import VueClipboard from 'vue-clipboard2'
 Vue.use(VueClipboard)
 
 // 开发环境下面使用vConsole进行调试
-if (process.env.NODE_ENV === 'development') {
+if (process.env.VUE_CLI_ENV_SIGN !== 'production') {
   const VConsole = require('vconsole')
   new VConsole()
 }
