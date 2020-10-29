@@ -19,6 +19,8 @@ export default {
           setLanguage(language)
           this.$i18n.locale = language
         }
+
+        document.title = this.$t(newVal.meta.title)
       },
       deep: true,
       immediate: true

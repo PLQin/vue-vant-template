@@ -47,7 +47,7 @@ Vue.prototype.$t = (str, ...vals) => {
       if (!langData[key]) {
         continue
       }
-      if (new RegExp(key.replaceAll('{}', '(.*)')).test(str)) {
+      if (new RegExp(key.replace(/\{\}/g, '(.*)')).test(str)) {
         let args = str
         key.split('{}').forEach(item => {
           args = args.replace(item, '<@>')
