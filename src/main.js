@@ -41,7 +41,7 @@ import VueClipboard from 'vue-clipboard2'
 Vue.use(VueClipboard)
 
 // 开发环境下面使用vConsole进行调试
-if (process.env.VUE_CLI_ENV_SIGN !== 'production') {
+if (process.env.VUE_APP_ENV_SIGN !== 'production') {
   const VConsole = require('vconsole')
   new VConsole()
 }

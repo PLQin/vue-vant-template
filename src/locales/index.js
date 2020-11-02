@@ -1,4 +1,4 @@
-import { get as getLanguage } from '@/utils/language.js'
+import { set as setLanguage, get as getLanguage } from '@/utils/language.js'
 import Vue from 'vue'
 import VueI18n from 'vue-i18n'
 
@@ -8,7 +8,9 @@ const Locale = [
   'zh_CN',
   'th_TH'
 ]
+
 const locale = getLanguage() || Locale[0]
+if (locale) setLanguage(locale)
 for (let i = 0; i < Locale.length; i++) {
   data[Locale[i]] = require(`@/locales/${Locale[i]}.json`)
 }
@@ -20,10 +22,7 @@ const i18n = new VueI18n({
   messages: data
 })
 
-// 支持占位匹配, eg:
-// "您于 {} 提交的【{}】申请已经受理":"Your application [ {} ] at {} has been accepted"
-// <!-- time 和 provenance 的顺序是故意调整的 -->
-// {{ $t(`您于 ${ provenance } 提交的【${ time }】申请已经受理`) }}
+// 支持占位匹配
 const regData = {}
 Object.keys(data).forEach(lang => {
   const langData = data[lang]
@@ -47,6 +46,7 @@ Vue.prototype.$t = (str, ...vals) => {
       if (!langData[key]) {
         continue
       }
+
       if (new RegExp(key.replace(/\{\}/g, '(.*)')).test(str)) {
         let args = str
         key.split('{}').forEach(item => {

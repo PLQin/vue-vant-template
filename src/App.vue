@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import { set as setLanguage } from '@/utils/language.js'
+import { set as setLanguage, get as getLanguage } from '@/utils/language.js'
 export default {
   data() {
     return {
@@ -19,10 +19,10 @@ export default {
         const { language } = newVal.query
         if (language) {
           setLanguage(language)
-          this.language = language
           this.$i18n.locale = language
         }
 
+        this.language = getLanguage()
         document.title = this.$t(newVal.meta.title)
       },
       deep: true,
