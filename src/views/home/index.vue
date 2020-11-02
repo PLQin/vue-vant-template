@@ -102,6 +102,18 @@ export default {
       }
     }
   },
+
+  // MARK : 返回上一页后仍然是当前页, 则关闭webview容器
+  // beforeRouteUpdate(to, from, next) {
+  //   if (from.name === 'home') {
+  //     // setTimeout(async() => {
+  //     //   commonFun('HP00010000')
+  //     // }, 0)
+  //   } else {
+  //     next()
+  //   }
+  // },
+
   computed: {
     ...mapGetters(['openid'])
   },
