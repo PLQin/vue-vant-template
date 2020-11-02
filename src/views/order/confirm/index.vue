@@ -132,15 +132,20 @@ export default {
     }
   },
   watch: {
+    $route: {
+      handler(newVal) {
+        this.init()
+      },
+      deep: true,
+      immediate: true
+    },
     stepperValue(value) {
       if (this.detail && this.detail.priceMin) {
         this.totalPrices = NP.times(value, this.detail.priceMin)
       }
     }
   },
-  created() {
-    this.init()
-  },
+  created() {},
   methods: {
     dataDesensitization,
 

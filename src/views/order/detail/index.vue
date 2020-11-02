@@ -183,9 +183,16 @@ export default {
       }
     }
   },
-  created() {
-    this.init()
+  watch: {
+    $route: {
+      handler(newVal) {
+        this.init()
+      },
+      deep: true,
+      immediate: true
+    }
   },
+  created() {},
   methods: {
     toDownloadApp() {
       window.open('https://d.gcpspay.com')

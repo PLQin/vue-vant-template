@@ -45,9 +45,16 @@ export default {
       current: 0
     }
   },
-  created() {
-    this.init()
+  watch: {
+    $route: {
+      handler(newVal) {
+        this.init()
+      },
+      deep: true,
+      immediate: true
+    }
   },
+  created() {},
   methods: {
     // 加载数据
     async init() {
