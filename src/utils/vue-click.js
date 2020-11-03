@@ -9,10 +9,12 @@ import Vue from 'vue'
   Vue.prototype.$on = function(event, func) {
     let previous = -1
     let newFunc = func
-    if (event === 'click') {
+
+    // 含括callback是因为一些子组件的 click 会执行 $emit('callback')
+    if (['click', 'callback'].includes(event)) {
       newFunc = function() {
         const now = new Date().getTime()
-        if (previous + 700 <= now) {
+        if (previous + 1000 <= now) {
           func.apply(this, arguments)
           previous = now
         }

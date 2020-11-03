@@ -1,5 +1,5 @@
 
-const LangKey = 'hb_lang' // 语言
+const LangKey = 'gp_lang' // 语言
 
 export function get() {
   return localStorage.getItem(LangKey)

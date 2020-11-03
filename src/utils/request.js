@@ -32,7 +32,7 @@ service.interceptors.request.use(
     // 在请求发出之前进行一些操作
     // config.headers['x-access-appid'] = 'ty9fd2848a039abbbb'
 
-    console.log(`--------> request`, config)
+    console.log(`--------> http ajax request`, config)
     config.data = Object.assign({}, defaultParams, config.data)
 
     return config
