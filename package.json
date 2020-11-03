@@ -11,6 +11,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "build:log": "vue-cli-service build --profile --json > build.log",
+    "test9": "vue-cli-service build --mode test9",
     "mock": "node mock/start.js",
     "lint": "vue-cli-service lint"
   },
@@ -66,7 +67,7 @@
     "npm": ">= 6.14.0"
   },
   "browserslist": [
-    "> 2%",
-    "last 2 versions"
+    "> 1%",
+    "last 1 versions"
   ]
 }
