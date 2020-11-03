@@ -101,11 +101,22 @@ const router = new VueRouter({
   scrollBehavior: () => ({ x: 0, y: 0 }) // 页面滚动行为
 })
 
-router.beforeEach((to, from, next) => {
-  // For language Settings, check out app.vue
+// router.beforeEach((to, from, next) => {
+//   // For language Settings, check out app.vue
+//
+//   next()
+// })
 
-  document.title = to.meta.title || '\u200E'
-  next()
+// https://router.vuejs.org/zh/guide/advanced/navigation-guards.html
+router.afterEach((to, from) => {
+  if (to.meta.title) {
+    document.title = to.meta.title
+  } else {
+    document.title = '\u200E'
+    setTimeout(() => { document.title = '\u200E' }, 100)
+    setTimeout(() => { document.title = '\u200E' }, 300)
+    setTimeout(() => { document.title = '\u200E' }, 600)
+  }
 })
 
 export default router
