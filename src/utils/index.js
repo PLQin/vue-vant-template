@@ -27,7 +27,7 @@ export function isWeixin() {
  *
  * @returns boolean
  */
-export function isDevice() {
+export function getDevice() {
   var ua = navigator.userAgent.toLowerCase()
   if (ua.search(/iPhone\sOS/i) !== -1 || ua.search(/iPad/i) !== -1) { // ios
     return 'iOS'
