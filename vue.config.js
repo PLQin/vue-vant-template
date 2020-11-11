@@ -18,7 +18,7 @@ module.exports = {
   },
 
   chainWebpack: config => {
-    // 项目标题
+    // 因为json-server也使用了public目录, 为了避免冲突, 重置vue-cli的静态资源地址为static
     config
       .plugin('html')
       .tap(args => {
