@@ -99,17 +99,21 @@ function count(fullPath) {
 }
 
 function modify(fullPath) {
-  const content = String(fs.readFileSync(fullPath))
+  let content = String(fs.readFileSync(fullPath))
+  if (content.indexOf('</template>') !== -1) {
+    const strs = content.split('</template>')
+    strs[0] = strs[0].replace(/>\s*([^{}+\n<>'"`]*?[\u4E00-\u9FA5][^{}+\n<>'"`]*?)\s*<([\s\S]+?)/g, ">{{ $t('$1') }}<$2")
+    content = strs.join('</template>')
+  }
 
   wrapperAndSave(fullPath, content
-    .replace(/>\s*([^{}+\n<>'"`]*?[\u4E00-\u9FA5][^{}+\n<>'"`]*?)\s*<([\s\S]+?<\/template>)/g, ">{{ $t('$1') }}<$2")
     .replace(/([\w-_]+)="([^{}+\n<>'"`]*?[\u4E00-\u9FA5][^{}+\n<>'"`]*?)"/g, `:$1="$t('$2')"`)
 
     // script 中的汉文不再被 $t() 调用
-    // .replace(/:\s*'([^'\n+;,]*?[\u4E00-\u9FA5][^'\n+;,]*?)'/g, ": $t('$1')")
-    // .replace(/,\s*'([^'\n+;,]*?[\u4E00-\u9FA5][^'\n+;,]*?)'\s*(?=[^:])/g, ", $t('$1')")
-    // .replace(/\?\s+'([^'\n+;,]*?[\u4E00-\u9FA5][^'\n+;,]*?)'/g, "? $t('$1')")
-    // .replace(/'([^'\n+;,]*?[\u4E00-\u9FA5][^'\n+;,]*?)'\s*,/g, "$t('$1'),")
+    .replace(/:\s*'([^'\n+;,]*?[\u4E00-\u9FA5][^'\n+;,]*?)'/g, ": $t('$1')")
+    .replace(/,\s*'([^'\n+;,]*?[\u4E00-\u9FA5][^'\n+;,]*?)'\s*(?=[^:])/g, ", $t('$1')")
+    .replace(/\?\s+'([^'\n+;,]*?[\u4E00-\u9FA5][^'\n+;,]*?)'/g, "? $t('$1')")
+    .replace(/'([^'\n+;,]*?[\u4E00-\u9FA5][^'\n+;,]*?)'\s*,/g, "$t('$1'),")
   )
 }
 
