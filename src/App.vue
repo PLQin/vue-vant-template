@@ -30,7 +30,7 @@ export default {
     }
   },
   created() {
-    console.log(`localhost : ${location}`)
+    console.log(location)
     console.log('app.vue : dev')
   }
 }
