@@ -23,7 +23,7 @@ export default {
         }
 
         this.language = getLanguage()
-        document.title = this.$t(newVal.meta.title)
+        if (newVal.meta.title) document.title = this.$t(newVal.meta.title)
       },
       deep: true,
       immediate: true

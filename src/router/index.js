@@ -110,7 +110,7 @@ const router = new VueRouter({
 // https://router.vuejs.org/zh/guide/advanced/navigation-guards.html
 router.afterEach((to, from) => {
   if (to.meta.title) {
-    document.title = to.meta.title
+    // 在 App.vue 中已针对 document.title 进行了国际化的处理
   } else {
     document.title = '\u200E'
     setTimeout(() => { document.title = '\u200E' }, 100)
