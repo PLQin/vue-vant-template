@@ -140,3 +140,13 @@ hr {
   margin: 1em 0;
   padding: 0;
 }
+
+// iphoneX 等机型底部安全区适配
+// https://vant-contrib.gitee.io/vant/#/zh-CN/advanced-usage#di-bu-an-quan-qu-gua-pei
+@supports (bottom: env(safe-area-inset-bottom)) {
+  body {
+    padding-bottom: constant(safe-area-inset-bottom, 34px);
+    padding-bottom: env(safe-area-inset-bottom, 34px);
+    padding-top: var(safe-area-inset-bottom, 34px);
+  }
+}
