@@ -31,7 +31,7 @@ export default {
   },
   created() {
     console.log(location)
-    console.log('app.vue : dev')
+    console.log(`app : ${process.env.VUE_APP_ENV_SIGN || process.env.NODE_ENV}`)
   }
 }
 </script>

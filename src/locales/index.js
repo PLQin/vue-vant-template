@@ -4,9 +4,9 @@ import VueI18n from 'vue-i18n'
 
 const data = {}
 const Locale = [
-  'en_US',
-  'zh_CN',
-  'th_TH'
+  'en_us',
+  'zh_cn',
+  'th_th'
 ]
 
 const locale = getLanguage() || Locale[0]
