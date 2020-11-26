@@ -16,7 +16,7 @@ export default {
 
 <style lang="scss">
 .zj-loading {
-  z-index: 9999;
+  z-index: 1000;
   text-align: center;
   .van-loading{
     top: 40%;

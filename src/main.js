@@ -3,8 +3,9 @@ import Vue from 'vue'
 // Vant
 import Vant from 'vant'
 import 'vant/lib/index.css'
-import '@/style/index.scss'
 Vue.use(Vant)
+
+import '@/style/custom.scss'
 
 import i18n from '@/locales/index.js'
 

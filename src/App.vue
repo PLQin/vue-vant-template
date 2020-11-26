@@ -1,21 +1,34 @@
 
 <template>
-  <div id="app" :class="`app-language-${language}`">
+  <div id="app" :class="`device-${device} app-language-${language}`">
     <router-view class="router" />
   </div>
 </template>
 
 <script>
 import { set as setLanguage, get as getLanguage } from '@/utils/language.js'
+import { isWeixin, getDevice } from '@/utils/index.js'
+import { mapGetters } from 'vuex'
 export default {
   data() {
     return {
-      language: ''
+      language: '',
+      device: isWeixin() ? 'weixin' : getDevice()
     }
+  },
+  computed: {
+    ...mapGetters(['openid'])
   },
   watch: {
     $route: {
       handler(newVal) {
+        if (!localStorage.openid && newVal.path !== '/') {
+          this.$toast('请先登录')
+          setTimeout(() => {
+            this.$router.push({ path: '/' })
+          }, 0)
+        }
+
         const { language } = newVal.query
         if (language) {
           setLanguage(language)
@@ -36,4 +49,7 @@ export default {
 }
 </script>
 
-<style lang="scss" src='./app.scss'></style>
+<style lang="scss" src='./app.scss' ></style>
+<style lang="scss" src='@/style/weixin.scss' ></style>
+<style lang="scss" src='@/style/ios.scss' ></style>
+<style lang="scss" src='@/style/android.scss' ></style>

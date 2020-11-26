@@ -16,11 +16,12 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "async-validator": "^3.4.0",
     "axios": "^0.19.2",
     "dayjs": "^1.8.32",
     "js-cookie": "^2.2.1",
     "number-precision": "^1.5.0",
-    "vant": "^2.9.0",
+    "vant": "^2.10.8",
     "vconsole": "^3.3.4",
     "vue": "^2.6.11",
     "vue-clipboard2": "^0.3.1",

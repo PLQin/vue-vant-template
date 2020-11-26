@@ -17,6 +17,10 @@
   // padding-top: 10px;
 }
 
+.my-car-sharing{
+  padding: 8px 0 66px 0;
+}
+
 /deep/ .van-coupon {
   .van-tag {
     margin: 0 2px 0 0;
@@ -83,16 +87,10 @@
   }
 }
 
-.home {
-  .search {
-    .exchange {
-      padding: 0 16px 0 46px;
-    }
-    .van-icon {
-      vertical-align: middle;
-    }
-    .van-search__action {
-      color: $text-active-color;
-    }
-  }
+.item-list {
+  // padding-top: 10px;
+}
+
+.van-coupon {
+  //
 }

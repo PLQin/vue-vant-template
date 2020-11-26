@@ -1,11 +1,17 @@
 
 <template>
-  <div>
-    <div v-for="(item,index) in datum.list" :key="index" class="van-coupon" @click="openDetail(item)">
+  <div class="my-car-sharing">
+    <van-nav-bar :title="$route.meta.title" left-text="返回" left-arrow @click-left="onClickLeft" />
+    <div
+      v-for="(item,index) in datum.list"
+      :key="index"
+      class="van-coupon"
+      @click="openDetail(item)"
+    >
       <div class="van-card">
         <div class="info van-ellipsis">
           <van-tag v-if="item.is_top == 1" size="medium" type="warning">置顶</van-tag>
-          <van-tag v-if="item.is_long == 2" size="medium" type="primary">长期</van-tag>
+          <van-tag v-if="item.is_long == 1" size="medium" type="primary">长期</van-tag>
           <van-tag size="medium" type="primary">
             <template v-if="item.type == 1">车找人</template>
             <template v-else>人找车</template>
@@ -16,13 +22,13 @@
             <em>{{ item.destination }}</em>
           </span>
           <span class="s4">
-            <small> （途径：{{ item.pathway }}）</small>
+            <small>（途径：{{ item.pathway }}）</small>
             <!-- MARK :  v-for 如何在v-for中使用 filter -->
             <!-- <small v-for="(elem,count) in filterPathway(item.pathway)" :key="count">
               <i v-if="count !== 0">,</i>
               {{ elem }}
             </small>
-            ） -->
+            ）-->
           </span>
         </div>
       </div>
@@ -31,9 +37,9 @@
           <li>
             <span v-if="item.is_long == 2">
               <b class="emphasis">每天</b>
-              {{ item.days_departure_time }} 出发
+              {{ $moment(item.createTime).format('HH:mm') }} 出发
             </span>
-            <span v-else>{{ $moment(item.once_departure_time).format('YYYY-MM-DD HH:mm') }} 出发</span>
+            <span v-else>{{ $moment(item.createTime).format('YYYY-MM-DD HH:mm') }} 出发</span>
           </li>
           <li class="van-multi-ellipsis--l2">备注：{{ item.remark }}</li>
         </ul>
@@ -45,7 +51,13 @@
             <small>{{ $moment(item.createTime).format('YYYY-MM-DD HH:mm') }}</small>
           </li>
         </ul>
-        <van-button class="van-cd_right" size="small" plain type="info" @click.stop="onPhoneCallTask(item.phone)">拨打电话</van-button>
+        <van-button
+          class="van-cd_right"
+          size="small"
+          plain
+          type="info"
+          @click.stop="onPhoneCallTask(item.phone)"
+        >拨打电话</van-button>
       </div>
     </div>
     <div v-if="!datum.list || !datum.list.length">
@@ -55,27 +67,35 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+import { articleList } from '@/api/article.js'
 export default {
   components: {},
-  props: {
-    datum: {
-      type: Object,
-      default() {
-        return {
-          total: 0,
-          page: 0,
-          size: 0,
-          list: []
-        }
+  props: {},
+  data() {
+    return {
+      datum: {
+        total: 0,
+        page: 0,
+        size: 0,
+        list: []
       }
     }
   },
-  data() {
-    return {}
+  computed: {
+    ...mapGetters(['openid'])
   },
-  computed: {},
-  created() {},
+  created() {
+    this.getArticleList()
+  },
   methods: {
+    async getArticleList() {
+      const sendForm = { issuer: localStorage.openid }
+      const resp = await articleList(sendForm).catch(() => {})
+      if (resp && resp.code === 200) {
+        this.datum.list = resp.data
+      }
+    },
     onClickLeft() {
       this.$toast('返回')
     },

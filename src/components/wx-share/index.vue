@@ -1,7 +1,7 @@
 
 <template>
   <div v-show="visible" class="share">
-    <img class="tips" src="@/assets/common/share.png">
+    <img class="tips" src="@/assets/img/common/share.png">
   </div>
 </template>
 

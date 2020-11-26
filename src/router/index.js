@@ -16,7 +16,8 @@ import Layout from '@/layout'
 import Home from '../views/home'
 
 /* Router Modules */
-import userCenter from './modules/user-center.js'
+import carpool from './modules/carpool.js'
+import user from './modules/user.js'
 
 /**
  * Note: sub-menu only appear when route children.length >= 1
@@ -42,6 +43,7 @@ const routes = [
     path: '*',
     redirect: '/'
   },
+
   {
     path: '/',
     component: Layout,
@@ -52,30 +54,17 @@ const routes = [
         name: 'Home',
         component: Home,
         // webview项目中不要给首页添加title
-        meta: { title: '', icon: '' }
+        meta: { title: '寻乡情 · 拼车', icon: '' }
       }
     ]
   },
 
-  // 用户中心
-  ...userCenter,
+  // 拼车信息
+  ...carpool,
 
-  {
-    path: '/publish-news',
-    name: 'publish-news',
-    component: () => import('@/views/publish-news/index.vue'),
-    meta: {
-      title: '发布信息'
-    }
-  },
-  {
-    path: '/user-agreement',
-    name: 'user-agreement',
-    component: () => import('@/views/user-agreement/index.vue'),
-    meta: {
-      title: '用户协议'
-    }
-  },
+  // 我的信息/ 用户中心
+  ...user,
+
   // 无权限页面
   {
     path: '/no-permission',
@@ -85,6 +74,7 @@ const routes = [
       title: '访问无权限'
     }
   },
+
   // 404 页面路由
   {
     path: '*',
@@ -97,13 +87,12 @@ const routes = [
 ]
 
 const router = new VueRouter({
+  // mode: 'history', // router.vuejs.org/zh/guide/essentials/history-mode.html
   routes,
   scrollBehavior: () => ({ x: 0, y: 0 }) // 页面滚动行为
 })
 
 // router.beforeEach((to, from, next) => {
-//   // For language Settings, check out app.vue
-//
 //   next()
 // })
 

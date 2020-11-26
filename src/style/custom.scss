@@ -1,7 +1,31 @@
+@import './mixin.scss';
+@import './function.scss';
+@import './reset.scss';
+@import "./reset-vant-ui.scss";
 
 /**
 * vant 顶部bar左侧icon未与title对齐
 */
 .van-nav-bar .van-icon {
   top: 1px;
+}
+
+.gp-h10 {
+	height: 10px;
+}
+
+.gp-h20 {
+	height: 20px;
+}
+
+.gp-h30 {
+	height: 30px;
+}
+
+.gp-h40 {
+	height: 40px;
+}
+
+.gp-h50 {
+	height: 50px;
 }

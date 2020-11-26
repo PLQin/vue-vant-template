@@ -1,12 +1,7 @@
 
 <template>
   <div>
-    <van-nav-bar
-      :title="$route.meta.title"
-      left-text="返回"
-      left-arrow
-      @click-left="onClickLeft"
-    />
+    <van-nav-bar :title="$route.meta.title" left-text="返回" left-arrow @click-left="onClickLeft" />
 
     <van-notice-bar
       wrapable
@@ -75,9 +70,7 @@ export default {
     }
   },
   computed: {},
-  created() {
-    console.log(this.$route)
-  },
+  created() {},
   methods: {
     onClickLeft() {
       this.$router.go(-1)

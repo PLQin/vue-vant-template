@@ -62,8 +62,7 @@ service.interceptors.response.use(
     // if the custom code is not 200, it is judged as an error.
     // 判断字符串而不是数值, 因为code可能是字母加数字组合
     if (String(res.code) !== '200') {
-      Toast(res.msg)
-      // return Promise.reject(new Error(res.message || 'Error'))
+      Toast(res.msg || '服务器异常，请稍后再试')
       return Promise.reject(res.message || 'Error')
     } else {
       return res

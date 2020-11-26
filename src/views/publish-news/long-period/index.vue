@@ -9,14 +9,14 @@
         clickable
         required
         label="发布类型"
-        @click="type.show = true"
+        @click="config.type.show = true"
       />
-      <van-popup v-model="type.show" round position="bottom">
+      <van-popup v-model="config.type.show" round position="bottom">
         <van-picker
           title="发布类型"
           show-toolbar
-          :columns="type.columns"
-          @cancel="type.show = false"
+          :columns="config.type.columns"
+          @cancel="config.type.show = false"
           @confirm="onConfirmType"
         />
       </van-popup>
@@ -35,7 +35,7 @@
         placeholder="2-20个字符"
       />
       <van-field
-        v-model="form.days_departureTime"
+        v-model="form.days_departure_time"
         input-align="right"
         readonly
         clickable
@@ -50,19 +50,14 @@
           type="time"
           title="选择完整时间"
           @cancel="date.show = false"
-          @confirm="onConfirmDepartureTime"
+          @confirm="onConfirmdeparture_time"
         />
       </van-popup>
-      <van-field
-        v-model="form.pathway"
-        input-align="right"
-        label="途径地"
-        placeholder="请用“，”隔开每个途径地"
-      />
+      <van-field v-model="form.pathway" input-align="right" label="途径地" placeholder="请用“，”隔开每个途径地" />
 
       <div class="interval" />
       <van-field
-        v-model="form.phone"
+        v-model.number="form.phone"
         input-align="right"
         required
         type="tel"
@@ -70,19 +65,16 @@
         placeholder="请输入手机号"
       />
       <van-field
-        v-model="form.seats"
+        v-model.number="form.seats"
         input-align="right"
         required
         type="digit"
-        label="空位"
+        label="剩余空位"
         placeholder="请填写数量"
       />
 
       <div class="interval" />
-      <van-cell
-        center
-        title="更多描述"
-      >
+      <van-cell center title="更多描述">
         <template slot="label">
           <van-field
             v-model="form.remark"
@@ -99,14 +91,19 @@
 
       <div class="interval" />
       <van-cell-group>
-        <van-cell class="effective-days van-cell--required" title="有效天数" :value="`${form.day}天`" @click="days.show = true" />
+        <van-cell
+          class="effective-days van-cell--required"
+          title="有效天数"
+          :value="`${form.day}天`"
+          @click="config.days.show = true"
+        />
       </van-cell-group>
-      <van-popup v-model="days.show" round position="bottom">
+      <van-popup v-model="config.days.show" round position="bottom">
         <van-picker
           title="有效天数"
           show-toolbar
-          :columns="days.columns"
-          @cancel="days.show = false"
+          :columns="config.days.columns"
+          @cancel="config.days.show = false"
           @confirm="onConfirmDays"
         />
       </van-popup>
@@ -115,21 +112,6 @@
         <span class="active">15</span>
         <span>元</span>
       </div>
-
-      <div class="interval" />
-      <van-cell-group class="please-agree-user-agreement">
-        <p>
-          <van-checkbox v-model="form.agreeUserAgreement" icon-size="16px">
-            <div>
-              我已阅读并同意
-              <span
-                class="active"
-                @click.stop="$router.push({ path: '/user-agreement' })"
-              >《拼车平台说明》</span>
-            </div>
-          </van-checkbox>
-        </p>
-      </van-cell-group>
     </van-form>
   </div>
 </template>
@@ -145,29 +127,21 @@ export default {
   },
   data() {
     return {
-      type: {
-        show: false,
-        columns: ['车找人', '人找车']
-      },
-
-      days: {
-        show: false,
-        columns: [7, 30, 90, 180]
-      },
-
       date: {
         show: false,
-        currentDate: ''
+        currentDate: '08:00'
       },
 
-      form: this.datum
+      form: this.datum.form,
+      config: this.datum.config
     }
   },
   computed: {},
   watch: {
     datum: {
       handler(newVal, oldVal) {
-        this.form = newVal
+        this.form = newVal.form
+        this.config = newVal.config
       },
       deep: true
     }
@@ -177,29 +151,20 @@ export default {
     onClickLeft() {
       this.$router.go(-1)
     },
-    onAgree() {
-      this.form.agreeUserAgreement = !this.form.agreeUserAgreement
-    },
-    onConfirm() {
-
-    },
-    onCancel() {
-
-    },
-    onChange() {
-
-    },
+    onConfirm() {},
+    onCancel() {},
+    onChange() {},
     onConfirmType(type) {
       this.form.type = type
-      this.type.show = false
+      this.config.type.show = false
     },
-    onConfirmDepartureTime(time) {
-      this.form.days_departureTime = time
+    onConfirmdeparture_time(time) {
+      this.form.days_departure_time = time
       this.date.show = false
     },
     onConfirmDays(day) {
       this.form.day = day
-      this.days.show = false
+      this.config.days.show = false
     }
   }
 }

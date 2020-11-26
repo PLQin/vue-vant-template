@@ -1,0 +1,92 @@
+/deep/ {
+  .to {
+    width: 12px;
+    height: 4px;
+    margin: 0 2px;
+    display: inline-block;
+    vertical-align: middle;
+    background-size: 100%;
+    background-image: url("http://r.imgccoo.cn/wap/webapp/images/carpool-arraw.png");
+  }
+
+  .interval {
+    height: 10px;
+  }
+
+  .van-coupon {
+    margin-top: 16px;
+    margin-bottom: 24px;
+    background-color: transparent;
+  }
+
+  .van-cell-group {
+    background-color: transparent;
+  }
+
+  .gp-cell {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 16px;
+    overflow: hidden;
+    color: #323233;
+    line-height: 24px;
+    background-color: #fff;
+    .s3 {
+      margin-left: 4px;
+    }
+    .title {
+      position: relative;
+      display: inline-block;
+      span {
+        text-align: justify;
+        width: 60px;
+        display: inline-block;
+        white-space: nowrap;
+      }
+      &:after {
+        position: absolute;
+        content: "：";
+        z-index: 10;
+      }
+    }
+
+    .value {
+      display: inline-block;
+      padding-left: 20px;
+    }
+
+    .title,
+    .value {
+      vertical-align: middle;
+    }
+  }
+
+  .gp-cell::after {
+    position: absolute;
+    box-sizing: border-box;
+    content: " ";
+    pointer-events: none;
+    right: 16px;
+    bottom: 0;
+    left: 16px;
+    border-bottom: 1px solid #ebedf0;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+  }
+}
+
+.gp-dial {
+  .icon,
+  .text {
+    color: $text-active-color;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .icon {
+    font-size: 18px;
+  }
+  .text {
+    margin-left: 10px;
+  }
+}
