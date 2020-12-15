@@ -67,6 +67,17 @@ export function easeout(A, B, rate, callback = () => { }) {
 }
 
 /**
+ * 得到URL中的参数(query string)
+ * @param {*} name
+ */
+export function getParameterByName(name) {
+  name = name.replace(/[\[]/, '\\\[').replace(/[\]]/, '\\\]')
+  var regex = new RegExp('[\\?&]' + name + '=([^&#]*)')
+  var results = regex.exec(location.href)
+  return results == null ? '' : decodeURIComponent(results[1])
+}
+
+/**
  * Parse the time to string
  * @param {(Object|string|number)} time
  * @param {string} cFormat

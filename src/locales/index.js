@@ -1,4 +1,5 @@
 import { set as setLanguage, get as getLanguage } from '@/utils/language.js'
+import { getParameterByName } from '@/utils/index.js'
 import Vue from 'vue'
 import VueI18n from 'vue-i18n'
 
@@ -9,7 +10,9 @@ const Locale = [
   'th_th'
 ]
 
-const locale = getLanguage() || Locale[0]
+var locale = getParameterByName('language') || getLanguage() || Locale[0]
+locale = locale.toLowerCase()
+
 if (locale) setLanguage(locale)
 for (let i = 0; i < Locale.length; i++) {
   data[Locale[i]] = require(`@/locales/${Locale[i]}.json`)

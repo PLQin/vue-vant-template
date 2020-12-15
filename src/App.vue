@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import { set as setLanguage, get as getLanguage } from '@/utils/language.js'
+import { get as getLanguage } from '@/utils/language.js'
 import { isWeixin, getDevice } from '@/utils/index.js'
 import { mapGetters } from 'vuex'
 export default {
@@ -27,12 +27,6 @@ export default {
           setTimeout(() => {
             this.$router.push({ path: '/' })
           }, 0)
-        }
-
-        const { language } = newVal.query
-        if (language) {
-          setLanguage(language)
-          this.$i18n.locale = language
         }
 
         this.language = getLanguage()
