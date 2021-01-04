@@ -1,6 +1,10 @@
 .device-weixin {
   .gp-nav-bar,
   .van-nav-bar {
-    display: none !important;
+    display: none ;
+    .van-nav-bar__text {
+      position: relative;
+      top: 2px;
+    }
   }
 }

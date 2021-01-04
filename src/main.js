@@ -45,6 +45,8 @@ Vue.use(VueClipboard)
 if (process.env.VUE_APP_ENV_SIGN !== 'production') {
   const VConsole = require('vconsole')
   new VConsole()
+
+  console.log(`--------> process.env`, process.env)
 }
 
 // 初始化clientId

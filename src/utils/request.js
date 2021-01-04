@@ -18,7 +18,7 @@ const service = axios.create({
   //   'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'
   // },
 
-  timeout: 10000 // request timeout
+  timeout: process.env.NODE_ENV === 'production' ? 3000 : 15000 // request timeout
 })
 Vue.prototype.$axios = axios
 
