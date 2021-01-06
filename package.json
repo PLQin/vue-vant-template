@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "async-validator": "^3.4.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "dayjs": "^1.8.32",
     "js-cookie": "^2.2.1",
     "number-precision": "^1.5.0",
