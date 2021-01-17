@@ -1,0 +1,67 @@
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+#app {
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  background-color: #f1f3f5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  min-height: 100vh;
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+
+  // https://www.zhangxinxu.com/wordpress/2018/10/scroll-behavior-scrollintoview-平滑滚动/
+  scroll-behavior: smooth;
+}
+
+@media screen and (min-width: 980px) {
+  #app {
+    width: 500px;
+    margin: 0 auto;
+  }
+
+  .footer-button,
+  .footer-button,
+  .van-nav-bar--fixed {
+    width: 500px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/** 解决路由切换动画上下闪动问题 */
+.router {
+  width: 100%;
+  backface-visibility: hidden;
+  min-height: 100vh;
+}
+
+.van-slide-right-enter-active,
+.van-slide-right-leave-active {
+  transition: opacity 0.2s;
+}
+.van-slide-right-enter,
+.van-slide-right-leave-to {
+  opacity: 0;
+}
+
+/** 返回按钮 */
+.van-nav-bar .van-icon,
+.van-nav-bar__title {
+  color: #000000;
+}
+
+.login-dialog {
+  top: 40%;
+}

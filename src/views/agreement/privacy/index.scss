@@ -1,0 +1,39 @@
+.interval {
+  height: 10px;
+}
+
+.van-panel__footer {
+  background-color: #ffffff;
+  .title {
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 20px 0 10px 0;
+  }
+  h2 {
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 20px 0 10px 0;
+  }
+  h3 {
+    line-height: 1.2;
+    margin: 20px 0 10px 0;
+  }
+  .content {
+    margin-top: 4px;
+    p,
+    li {
+      line-height: 1.2;
+      margin: 4px 0;
+    }
+    p {
+      text-indent: 28px;
+    }
+  }
+}
+
+.open-floor {
+  background-color: #ffffff;
+  height: 60px;
+}

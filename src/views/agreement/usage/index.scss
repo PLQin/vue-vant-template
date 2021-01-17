@@ -1,0 +1,22 @@
+.interval {
+  height: 10px;
+}
+
+.van-panel__footer {
+  background-color: #ffffff;
+  .title {
+    font-size: 18px;
+    font-weight: 800;
+  }
+  .content {
+    margin-top: 4px;
+    li {
+      line-height: 1.2;
+    }
+  }
+}
+
+.open-floor {
+  background-color: #ffffff;
+  height: 60px;
+}

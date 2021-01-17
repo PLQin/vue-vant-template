@@ -1,0 +1,88 @@
+.van-nav-bar__left {
+  .content {
+    width: 30px;
+    box-sizing: border-box;
+    padding: 4px;
+    font-size: 0;
+    background-color: rgba(200, 201, 204, 0.13);
+    border-radius: 50%;
+  }
+  img {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+/deep/ .van-coupon {
+  margin-top: 12px;
+  .van-tag {
+    margin: 0 2px 0 0;
+  }
+
+  .s3 {
+    margin-left: 4px;
+    em {
+      font-style: initial;
+    }
+  }
+
+  .van-card {
+    .to {
+      width: 12px;
+      height: 4px;
+      margin: 0 2px;
+      display: inline-block;
+      vertical-align: middle;
+      background-size: 100%;
+      background-image: url("http://r.imgccoo.cn/wap/webapp/images/carpool-arraw.png");
+    }
+  }
+
+  .van-coupon__content {
+    padding: 10px 16px;
+
+    .emphasis {
+      color: #e30d0d;
+    }
+
+    li {
+      margin-top: 4px;
+    }
+  }
+
+  .van-coupon__description {
+    position: relative;
+  }
+
+  .van-cd_left,
+  .van-cd_right {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .van-cd_left {
+    line-height: 32px;
+    span,
+    small {
+      display: inline-block;
+      vertical-align: baseline;
+    }
+    span {
+      font-size: 14px;
+    }
+    small {
+      margin-left: 4px;
+      color: #c8c9cc;
+    }
+  }
+
+  .van-cd_right {
+    float: right;
+  }
+
+  li::before {
+    content: "· ";
+    font-weight: 600;
+    font-size: 12px;
+  }
+}
