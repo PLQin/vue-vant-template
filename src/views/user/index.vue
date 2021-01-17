@@ -218,6 +218,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
   components: {},
   data() {
@@ -235,9 +236,7 @@ export default {
     }
   },
   computed: {
-    user_info() {
-      return this.$store.state.user.user_info
-    }
+    ...mapGetters(['user_info'])
   },
   created() {},
   methods: {

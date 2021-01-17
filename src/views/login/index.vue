@@ -146,7 +146,7 @@ export default {
         this.showLoginDialog = false
         this.$store.commit('user/SET_LOGIN_TOKEN', resp.data.login_token)
         this.$store.commit('user/SET_USER_INFO', resp.data.detail)
-        this.goBack(true)
+        this.goBack('ok')
       } else {
         //
       }
@@ -208,9 +208,9 @@ export default {
       }, 1000)
     },
 
-    goBack(islogin) {
+    goBack(status) {
       const { query } = this.$route
-      if (query.redirect && islogin) {
+      if (query.redirect && String(status) === 'ok') {
         this.$router.replace(query.redirect)
       } else {
         this.$router.push({ path: '/' })

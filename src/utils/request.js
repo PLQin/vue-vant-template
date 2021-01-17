@@ -68,12 +68,13 @@ service.interceptors.response.use(
         return res
       case '100004':
         store.commit('user/SET_LOGOUT')
-        return res
+        Toast(`会话已过期，请重新登录`)
+        return Promise.reject(res.message || 'Error')
       default:
         Toast.clear()
         Dialog.alert({
           title: '提示',
-          message: res.message || '服务器异常，请稍后再试'
+          message: res.message || '服务器异常\n请稍后再试'
         })
         return Promise.reject(res.message || 'Error')
     }

@@ -2,9 +2,6 @@ const isProd = process.env.NODE_ENV === 'production'
 
 // gzip
 const CompressionWebpackPlugin = require('compression-webpack-plugin')
-console.log(`------------------`)
-console.log(process.env.VUE_APP_BASE_API)
-console.log(`------------------`)
 
 module.exports = {
   configureWebpack: config => {
