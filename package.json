@@ -12,6 +12,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "build:github": "vue-cli-service build && node bash/ali-oss.js ",
+    "build:docs": "vue-cli-service build && cp -rf dist/* docs/",
     "build:log": "vue-cli-service build --profile --json > build.log",
     "mock": "node mock/start.js",
     "lint": "vue-cli-service lint"
