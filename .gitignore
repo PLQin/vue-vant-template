@@ -8,6 +8,9 @@ npm-*.log
 *.log
 logs
 
+# custom file
+ali-oss.js
+
 # local env files
 .env.local
 .env.*.local

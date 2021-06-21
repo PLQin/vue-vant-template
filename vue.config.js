@@ -4,6 +4,8 @@ const isProd = process.env.NODE_ENV === 'production'
 const CompressionWebpackPlugin = require('compression-webpack-plugin')
 
 module.exports = {
+  publicPath: './',
+
   configureWebpack: config => {
     if (isProd) {
       // 配置webpack 压缩

@@ -11,6 +11,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build:github": "vue-cli-service build && node bash/ali-oss.js ",
     "build:log": "vue-cli-service build --profile --json > build.log",
     "mock": "node mock/start.js",
     "lint": "vue-cli-service lint"
@@ -34,6 +35,7 @@
     "@vue/cli-plugin-babel": "^4.4.0",
     "@vue/cli-plugin-eslint": "^4.4.0",
     "@vue/cli-service": "^4.5.3",
+    "ali-oss-publish": "^0.4.0",
     "babel-eslint": "^10.1.0",
     "babel-plugin-import": "^1.13.0",
     "babel-plugin-transform-remove-console": "^6.9.4",
