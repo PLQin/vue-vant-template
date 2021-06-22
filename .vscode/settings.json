@@ -10,9 +10,9 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "vetur.validation.template": false,
   "editor.detectIndentation": false,
   "editor.tabSize": 2,
+  "vetur.format.options.tabSize": 2,
   "search.exclude": {
     "**/dist": true
   },
@@ -24,4 +24,6 @@
   "html.format.indentHandlebars": true,
   "terminal.integrated.confirmOnExit": true,
   "terminal.integrated.cursorBlinking": true,
+  "vetur.format.options.useTabs": true,
+  "vetur.format.defaultFormatter.html": "prettyhtml",
 }
