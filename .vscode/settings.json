@@ -29,6 +29,7 @@
   "terminal.integrated.cursorBlinking": true,
   "vetur.format.options.useTabs": true,
   "vetur.format.defaultFormatter.html": "prettyhtml",
+  "editor.insertSpaces": false,
 }
 
 

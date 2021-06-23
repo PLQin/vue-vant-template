@@ -110,7 +110,7 @@ module.exports = {
       'allowSwitch': false,
     }],
     'no-lone-blocks': 2,
-    'no-mixed-spaces-and-tabs': 2,
+    'no-mixed-spaces-and-tabs': 0,
     'no-multi-spaces': 2,
     'no-multi-str': 2,
     'no-multiple-empty-lines': [2, {
@@ -148,10 +148,7 @@ module.exports = {
     }],
     'no-unreachable': 2,
     'no-unsafe-finally': 2,
-    'no-unused-vars': [2, {
-      'vars': 'all',
-      'args': 'none',
-    }],
+    'no-unused-vars': 1,
     'no-useless-call': 2,
     'no-useless-computed-key': 2,
     'no-useless-constructor': 2,
