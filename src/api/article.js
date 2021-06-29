@@ -1,16 +1,16 @@
 
-import request from '@/utils/request.js'
+import request from '@/utils/request.js';
 
 /**
  * 列表
  * @param {*} params
  */
 export function articleList(params) {
-  return request({
-    url: '/client/article/list',
-    method: 'get',
-    params
-  })
+	return request({
+		url: '/client/article/list',
+		method: 'get',
+		params,
+	});
 }
 
 /**
@@ -18,11 +18,11 @@ export function articleList(params) {
  * @param {*} data
  */
 export function articleAdd(data) {
-  return request({
-    url: '/client/article/add',
-    method: 'post',
-    data
-  })
+	return request({
+		url: '/client/article/add',
+		method: 'post',
+		data,
+	});
 }
 
 /**
@@ -30,11 +30,11 @@ export function articleAdd(data) {
  * @param {*} data
  */
 export function articleDetail(params) {
-  return request({
-    url: '/client/article/detail',
-    method: 'get',
-    params
-  })
+	return request({
+		url: '/client/article/detail',
+		method: 'get',
+		params,
+	});
 }
 
 /**
@@ -42,11 +42,11 @@ export function articleDetail(params) {
  * @param {*} data
  */
 export function articleEdit(data) {
-  return request({
-    url: '/client/article/edit',
-    method: 'post',
-    data
-  })
+	return request({
+		url: '/client/article/edit',
+		method: 'post',
+		data,
+	});
 }
 
 /**
@@ -54,9 +54,9 @@ export function articleEdit(data) {
  * @param {*} data
  */
 export function articleDelete(data) {
-  return request({
-    url: '/client/article/delete',
-    method: 'post',
-    data
-  })
+	return request({
+		url: '/client/article/delete',
+		method: 'post',
+		data,
+	});
 }

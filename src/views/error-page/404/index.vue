@@ -1,4 +1,4 @@
 
 <template>
-  <div>页面走丢了</div>
+	<div>页面走丢了</div>
 </template>

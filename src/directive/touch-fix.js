@@ -4,20 +4,20 @@
  */
 
 export default {
-  bind: (el, binding) => {
-    el.scrollIntoView()
-  },
-  inserted: (el) => {
-    el.scrollIntoView()
-    const ipt = el.querySelectorAll('input')
-    const ipts = ipt.length
-    if (ipts) {
-      for (let index = 0; index < ipts; index++) {
-        const element = ipt[index]
-        element.addEventListener('blur', function(event) {
-          el.scrollIntoView()
-        }, false)
-      }
-    }
-  }
-}
+	bind: (el, binding) => {
+		el.scrollIntoView();
+	},
+	inserted: (el) => {
+		el.scrollIntoView();
+		const ipt = el.querySelectorAll('input');
+		const ipts = ipt.length;
+		if (ipts) {
+			for (let index = 0; index < ipts; index++) {
+				const element = ipt[index];
+				element.addEventListener('blur', function(event) {
+					el.scrollIntoView();
+				}, false);
+			}
+		}
+	},
+};

@@ -1,5 +1,5 @@
 
-import { debounce } from 'lodash'
+import { debounce } from 'lodash';
 
 /**
  * 函数防抖装饰器
@@ -10,7 +10,7 @@ import { debounce } from 'lodash'
  * [options.trailing=true] (boolean): 指定在延迟结束后调用。
  */
 export default function(wait, options = {}) {
-  return function(target, name, descriptor) {
-    descriptor.value = debounce(descriptor.value, wait, options)
-  }
+	return function(target, name, descriptor) {
+		descriptor.value = debounce(descriptor.value, wait, options);
+	};
 }

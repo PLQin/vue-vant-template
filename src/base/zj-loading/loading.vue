@@ -1,17 +1,17 @@
 <template>
-  <van-overlay :show="loading" class="zj-loading">
-    <van-loading />
-  </van-overlay>
+	<van-overlay :show="loading" class="zj-loading">
+		<van-loading />
+	</van-overlay>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      loading: false
-    }
-  }
-}
+	data() {
+		return {
+			loading: false,
+		};
+	},
+};
 </script>
 
 <style lang="scss">

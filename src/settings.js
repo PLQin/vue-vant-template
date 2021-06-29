@@ -1,3 +1,3 @@
-const config = require('../package.json')
+const config = require('../package.json');
 
-module.exports = Object.assign({}, config)
+module.exports = Object.assign({}, config);

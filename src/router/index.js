@@ -1,17 +1,17 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import store from '@/store/index.js'
-Vue.use(VueRouter)
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import store from '@/store/index.js';
+Vue.use(VueRouter);
 
 /* Layout */
-import Layout from '@/layout'
+import Layout from '@/layout';
 
 // 为了首屏加载快，所以首页不使用懒加载
-import Home from '../views/home'
+import Home from '../views/home';
 
 /* Router Modules */
-import carpool from './modules/carpool.js'
-import user from './modules/user.js'
+import carpool from './modules/carpool.js';
+import user from './modules/user.js';
 
 /**
  * Note: sub-menu only appear when route children.length >= 1
@@ -34,90 +34,90 @@ import user from './modules/user.js'
   }
  */
 const routes = [
-  {
-    path: '*',
-    redirect: '/'
-  },
+	{
+		path: '*',
+		redirect: '/',
+	},
 
-  {
-    path: '/',
-    component: Layout,
-    redirect: '/home',
-    children: [
-      {
-        path: 'home',
-        name: 'Home',
-        component: Home,
-        // webview项目中最好不要给首页写死title，最好通过接口或者配置调用获得最新的title
-        meta: { title: '', icon: '' }
-      }
-    ]
-  },
+	{
+		path: '/',
+		component: Layout,
+		redirect: '/home',
+		children: [
+			{
+				path: 'home',
+				name: 'Home',
+				component: Home,
+				// webview项目中最好不要给首页写死title，最好通过接口或者配置调用获得最新的title
+				meta: { title: '', icon: '' },
+			}
+		],
+	},
 
-  // 拼车信息
-  ...carpool,
+	// 拼车信息
+	...carpool,
 
-  // 我的信息/ 用户中心
-  ...user,
+	// 我的信息/ 用户中心
+	...user,
 
-  {
-    path: '/login',
-    name: 'Login',
-    component: () => import('@/views/login/index.vue'),
-    meta: {
-      title: '登录'
-    }
-  },
+	{
+		path: '/login',
+		name: 'Login',
+		component: () => import('@/views/login/index.vue'),
+		meta: {
+			title: '登录',
+		},
+	},
 
-  // 无权限页面
-  {
-    path: '/no-permission',
-    name: 'NoPermission',
-    component: () => import('@/views/error-page/no-permission'),
-    meta: {
-      title: '访问无权限'
-    }
-  },
+	// 无权限页面
+	{
+		path: '/no-permission',
+		name: 'NoPermission',
+		component: () => import('@/views/error-page/no-permission'),
+		meta: {
+			title: '访问无权限',
+		},
+	},
 
-  // 404 页面路由
-  {
-    path: '*',
-    name: 'NotFound',
-    component: () => import('@/views/error-page/404'),
-    meta: {
-      title: '页面走丢了'
-    }
-  }
-]
+	// 404 页面路由
+	{
+		path: '*',
+		name: 'NotFound',
+		component: () => import('@/views/error-page/404'),
+		meta: {
+			title: '页面走丢了',
+		},
+	}
+];
 
 const router = new VueRouter({
-  // mode: 'history', // router.vuejs.org/zh/guide/essentials/history-mode.html
-  // scrollBehavior: () => ({ x: 0, y: 0 }), // 页面滚动行为不再被默认支持， 见：https://github.com/vuejs/vue-router/issues/675
-  routes
-})
+	// mode: 'history', // router.vuejs.org/zh/guide/essentials/history-mode.html
+	// scrollBehavior: () => ({ x: 0, y: 0 }), // 页面滚动行为不再被默认支持， 见：https://github.com/vuejs/vue-router/issues/675
+	routes,
+});
 
 router.beforeEach((to, from, next) => {
-  if (router.history.list) {
-    router.history.list.push(to)
-  } else {
-    router.history.list = [to]
-  }
-  store.commit('history/SET_LIST', to)
+	if (router.history.list) {
+		router.history.list.push(to);
+	} else {
+		router.history.list = [to];
+	}
+	store.commit('history/SET_LIST', to);
 
-  document.body.scrollTop = 0
-  next()
-})
+	document.body.scrollTop = 0;
+	next();
+});
 
 // https://router.vuejs.org/zh/guide/advanced/navigation-guards.html
 router.afterEach((to, from) => {
-  if (to.meta.title) {
-    // 在 src\locales\index.js 中已针对 document.title 进行了国际化的处理
-  } else {
-    document.title = '\u200E'
-    setTimeout(() => { document.title = '\u200E' }, 100)
-    setTimeout(() => { document.title = '\u200E' }, 300)
-    setTimeout(() => { document.title = '\u200E' }, 600)
-  }
-})
+	if (to.meta.title) {
+		// 在 src\locales\index.js 中已针对 document.title 进行了国际化的处理
+	} else {
+		document.title = '\u200E';
+		setTimeout(() => { document.title = '\u200E'; }, 100);
+		setTimeout(() => { document.title = '\u200E'; }, 300);
+		setTimeout(() => { document.title = '\u200E'; }, 600);
+	}
+});
 
-export default router
+export default router;
