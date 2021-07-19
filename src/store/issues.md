@@ -1,3 +1,4 @@
+```javascript
 import { mapState, mapGetters, mapMutations } from 'vuex';
 
 computed: {
@@ -58,3 +59,4 @@ methods: {
 		},
 }
 
+```

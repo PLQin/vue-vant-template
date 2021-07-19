@@ -1,6 +1,6 @@
 
 <template>
-	<div class="">
+	<div class="page ">
 		<div class="header">
 			<!--  -->
 		</div>
