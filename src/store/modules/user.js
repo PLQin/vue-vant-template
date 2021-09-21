@@ -29,7 +29,9 @@ const mutations = {
 };
 
 // https://vuex.vuejs.org/zh/guide/actions.html
-// 支持异步, 使用方法 this.$store.dispatch('user/setOpenId', resp.data.openid)
+// 支持异步, 使用方法
+//		this.$store.dispatch('user/setOpenId', resp.data.openid)
+//    const list = await this.$store.dispatch('device/getCountryCode');
 const actions = {
 	// DEMO
 	actionA({ dispatch, commit, state }, products) {
