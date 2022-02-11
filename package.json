@@ -45,7 +45,7 @@
     "json-server": "^0.16.1",
     "lint-staged": "^10.2.11",
     "mockjs": "^1.1.0",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "nodemon": "^2.0.4",
     "sass-loader": "^10.0.2",
     "vue-template-compiler": "^2.6.11"
